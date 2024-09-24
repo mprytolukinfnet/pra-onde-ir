@@ -76,3 +76,16 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
     cd scraper
     python3 fetch.py 
   ```
+
+5. (OPCIONAL) Reexecutar a raspagem das estatísticas da plataforma Airbnb -> os seguintes arquivos são gerados diretamente na pasta `data`:
+- `airbnb_annual_net_income.csv`
+- `airbnb_annual_revenue.csv`
+- `airbnb_bookings.csv`
+- `airbnb_booking_volume.csv`
+- `airbnb_listings.csv`
+- `airbnb_users.csv`
+
+```bash
+  cd fetch_statistics
+  python3 statistics.py 
+```
