@@ -19,6 +19,7 @@ O projeto será realizado ao longo do semestre, com entregas em fases específic
 **Datas relevantes**:
 - **26/08/2024**: Entrega do TP1, primeira estruturação do projeto.
 - **23/09/2024**: Entrega do TP2, evoluções na aplicação streamlit e inclusão de nova base de dados (estatísticas da plataforma Airbnb)
+- **21/10/2024**: Entrega do TP3, evoluções na aplicação streamlit com adição de múltiplas páginas, ampliação da base de dados do Airbnb utilizando Selenium e implantação de uma API utilizando FastAPI.
 
 ## Riscos:
 - **Qualidade dos Dados:** Dados incompletos ou inconsistentes podem afetar a precisão das recomendações.

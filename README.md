@@ -1,12 +1,12 @@
-# Projeto: Pra Onde Ir
+# Projeto: Pra Onde Ir?
 
-**Teste de Performance (TP) 02**
+**Teste de Performance (TP) 03**
 
 **Disciplina:** Projeto de Bloco: Ciência de Dados Aplicada
 
 **Aluno:** Miguel Belardinelli Prytoluk
 
-**Data:** 23/09/2024
+**Data:** 21/10/2024
 
 ## Descrição do Projeto
 
@@ -20,10 +20,15 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
 
 - **app**: Diretório contendo a aplicação demo desenvolvida em Streamlit.
   - **config**: Configurações da aplicação.
+    - **cfg.json**: Arquivo de configurações da aplicação
   - **model**: Modelos utilizados para previsão e recomendação de destinos.
   - **services**: Serviços auxiliares para processamento de dados.
-  - **airbnb_data.csv**: Amostra dos dados de hospedagens extraídos da plataforma Airbnb.
+  - **pages**: Páginas da aplicação Streamlit.
   - **app.py**: Arquivo principal da aplicação Streamlit.
+- **api**: Diretório contendo a API da aplicação, necessária para a execução
+  - **api.py**: Arquivo principal da API da aplicação.
+  - **DataFrameInput.py**: Modelo que representa o DataFrame de entrada para o Endpoint de adicionar hospedagens na API
+  - **ListingResponse.py**: Modelo que representa a saída para o Endpoint de obter hospedagens da API
 - **data**: Diretório contendo bases de dados utilizadas no projeto.
 - **docs**: Diretório para documentação do projeto, dividido em duas seções:
   - **business docs**: Documentos relacionados ao negócio, como o Business Model Canvas e o Project Charter.
@@ -65,19 +70,29 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
     pip install -r requirements.txt
   ```
 
-3. Executar a aplicação demo
+3. Executar a API
+  ```bash
+    cd api
+    uvicorn api:app --reload
+  ```
+  - É possível configurar o endereço que aplicação consulta a api no arquivo `/app/config/cfg.json`
+  - Após a execução da API, é possível acessar a sua documentação em http://127.0.0.1:8000/docs (altere caso seja utilizada outra url)
+
+
+4. Executar a aplicação Streamlit
   ```bash
     cd app
     streamlit run app.py 
   ```
 
-4. (OPCIONAL) Reexecutar a raspagem de dados da plataforma Airbnb -> o arquivo `airbnb_data.csv` é gerado diretamente na pasta `data`
+5. (OPCIONAL) Reexecutar a raspagem de dados da plataforma Airbnb -> o arquivo `airbnb_data.csv` é gerado diretamente na pasta `data`
   ```bash
     cd scraper
     python3 fetch.py 
   ```
+  - Recomendado utilizar um VPN para fazer a extração, pois o Airbnb pode bloquear o IP após múltiplas requisições.
 
-5. (OPCIONAL) Reexecutar a raspagem das estatísticas da plataforma Airbnb -> os seguintes arquivos são gerados diretamente na pasta `data`:
+6. (OPCIONAL) Reexecutar a raspagem das estatísticas da plataforma Airbnb -> os seguintes arquivos são gerados diretamente na pasta `data`:
 - `airbnb_annual_net_income.csv`
 - `airbnb_annual_revenue.csv`
 - `airbnb_bookings.csv`

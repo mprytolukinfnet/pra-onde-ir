@@ -14,6 +14,7 @@ Este relatório fornece uma visão geral das fontes de dados que serão utilizad
   - `Listing ID`: Identificação única da hospedagem.
   - `Name`: Nome da hospedagem.
   - `Room Type`: Tipo de acomodação (ex.: casa inteira, quarto privado).
+  - `Person Capacity`: Número máximo de hóspedes na hospedagem.
   - `Price per Night (R$)`: Preço por noite em Reais.
   - `Rating`: Avaliação média da hospedagem.
   - `Reviews`: Número de avaliações.
