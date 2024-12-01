@@ -93,7 +93,7 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
 
 6. Criar uma Chave de API Gemini em: https://aistudio.google.com/app/apikey
 
-7. Configurar o arquivo .env com as seguintes variáveis:
+7. Configurar um arquivo .env na pasta raiz do repositório com as seguintes variáveis:
 ```bash
 QDRANT_API_KEY=sua_chave_de_api_qdrant
 QDRANT_HOST=endereço_do_seu_cluster_qdrant
