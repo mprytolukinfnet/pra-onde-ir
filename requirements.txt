@@ -9,6 +9,7 @@ qdrant-client==1.12.1
 requests==2.32.3
 selenium==4.25.0
 streamlit==1.37.1
+streamlit_carousel==1.1.2
 undetected-chromedriver==3.5.5
 uvicorn==0.32.0
 --find-links https://download.pytorch.org/whl/torch_stable.html

@@ -18,6 +18,7 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
 
 ### Diretórios
 
+- **app.py**: Main app script
 - **app**: Diretório contendo a aplicação desenvolvida em Streamlit.
   - **services**: Serviços auxiliares para processamento de dados.
     - **generate_upload_vectors.py**: Script para gerar vetores das hospedagens do Airbnb e fazer o Upload para o Cluster Qdrant
@@ -126,6 +127,5 @@ APP_API_URL = "endereço_da_sua_api_da_aplicação(padrão: http://127.0.0.1:800
 
 2. Executar a aplicação Streamlit
 ```bash
-  cd app
   streamlit run app.py 
 ```

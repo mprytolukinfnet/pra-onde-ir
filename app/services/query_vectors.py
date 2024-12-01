@@ -1,5 +1,5 @@
 from qdrant_client import QdrantClient
-from services.call_llm import generate_embeddings
+from app.services.call_llm import generate_embeddings
 
 try:
     import streamlit as st

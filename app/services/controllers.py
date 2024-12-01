@@ -3,8 +3,8 @@ import asyncio
 import httpx
 import pandas as pd
 import re
-from services.prompts import get_selection_prompt, get_description_prompt
-from services.call_llm import call_llm, call_llm_stream
+from app.services.prompts import get_selection_prompt, get_description_prompt
+from app.services.call_llm import call_llm, call_llm_stream
 from streamlit_carousel import carousel
 
 # Initialize session state
@@ -47,7 +47,8 @@ async def get_data_async():
 # Get data from API
 @st.cache_data 
 def get_data():
-    return asyncio.run(get_data_async())
+    response = httpx.get(f"{API_URL}/get_listings/", timeout=10.0)  # Synchronous call
+    return pd.DataFrame(response.json())
     
 # Fetch listing images async
 async def get_listing_images_async(listing_id):
