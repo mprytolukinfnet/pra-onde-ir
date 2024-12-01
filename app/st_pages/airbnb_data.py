@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.title("Dados da plataforma Airbnb")
 @st.cache_data
 def load_statistics(file_name):
-    return pd.read_csv(f'../data/{file_name}')
+    return pd.read_csv(f'data/{file_name}')
 
 # Listagem dos arquivos CSV e seus respectivos títulos
 data_files = {
