@@ -47,7 +47,7 @@ async def get_data_async():
 # Get data from API
 @st.cache_data 
 def get_data():
-    response = httpx.get(f"{API_URL}/get_listings/", timeout=10.0)  # Synchronous call
+    response = httpx.get(f"{API_URL}/get_listings/", timeout=30.0)  # Synchronous call
     return pd.DataFrame(response.json())
     
 # Fetch listing images async

@@ -72,6 +72,4 @@ try:
             else:
                 st.warning("Nenhuma hospedagem similar encontrada. Tente refinar sua consulta.")
 except httpx.ConnectError as e:
-    st.error(e)
-    st.error(st.secrets.APP_API_URL)
     st.error("Não foi possível recuperar os dados da API")
