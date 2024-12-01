@@ -3,6 +3,7 @@ import asyncio
 import httpx
 import pandas as pd
 import re
+from urllib.parse import urljoin
 from app.services.prompts import get_selection_prompt, get_description_prompt
 from app.services.call_llm import call_llm, call_llm_stream
 from streamlit_carousel import carousel
@@ -40,20 +41,21 @@ def select_next_listing(NUM_SIMILAR_LISTINGS):
 # Fetch data async
 async def get_data_async():
     async with httpx.AsyncClient() as client:
-        url = f"{API_URL}/get_listings/"
+        url = urljoin(API_URL, "/get_listings/")
         response = await client.get(url)
         return pd.DataFrame(response.json())
 
 # Get data from API
-@st.cache_data 
+# @st.cache_data 
 def get_data():
-    response = httpx.get(f"{API_URL}/get_listings/", timeout=30.0)  # Synchronous call
+    url = urljoin(API_URL, "/get_listings/")
+    response = httpx.get(url, timeout=30.0)
     return pd.DataFrame(response.json())
     
 # Fetch listing images async
 async def get_listing_images_async(listing_id):
     async with httpx.AsyncClient() as client:
-        url = f"{API_URL}/get_airbnb_pictures/?listing_id={listing_id}"
+        url = urljoin(API_URL, f"/get_airbnb_pictures/?listing_id={listing_id}")
         response = await client.get(url)
         return response.json()
 
