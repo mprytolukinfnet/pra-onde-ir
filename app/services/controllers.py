@@ -46,7 +46,7 @@ async def get_data_async():
         return pd.DataFrame(response.json())
 
 # Get data from API
-# @st.cache_data 
+@st.cache_data 
 def get_data():
     url = urljoin(API_URL, "/get_listings/")
     response = httpx.get(url, timeout=30.0)
