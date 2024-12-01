@@ -1,6 +1,11 @@
 import streamlit as st
 
 st.title("Sobre o Projeto")
+st.markdown("""
+Desenvolvido por **Miguel Belardinelli Prytoluk** no segundo semestre de 2024.\n
+**Disciplina**: Projeto de Bloco: Ciência de Dados Aplicada\n
+**Instituto Infnet**
+""")
 # Descrição do Problema de Negócio e Objetivos
 st.header("Descrição do Problema de Negócio")
 st.write("""
@@ -19,6 +24,5 @@ st.write("""
 st.header("Links Úteis")
 st.markdown("[Airbnb - Hospedagens](https://www.airbnb.com/)")
 st.markdown("[ODS 11 - Cidades e Comunidades Sustentáveis](https://sdgs.un.org/goals/goal11)")
-st.markdown("[OpenStreetMap](https://www.openstreetmap.org/)")
 st.markdown("[Projeto referência](https://nyc-venue-search.streamlit.app/)")
 st.markdown("[Fonte de Dados da plataforma Airbnb](https://www.businessofapps.com/data/airbnb-statistics/)")

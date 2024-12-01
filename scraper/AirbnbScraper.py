@@ -1,13 +1,19 @@
-import requests, pickle, json, urllib3
-import pandas as pd
+import requests, pickle, urllib3
 from bs4 import BeautifulSoup
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-import undetected_chromedriver as uc
-import concurrent.futures
-import re
+
+try:
+    import json
+    import pandas as pd
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.common.exceptions import TimeoutException
+    import undetected_chromedriver as uc
+    import concurrent.futures
+    import re
+except ImportError as ie:
+    print(ie)
+    print("Modules not found, should be ok if only fetching Airbnb pictures")
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -50,8 +56,8 @@ class AirbnbScraper(object):
             f"https://www.airbnb.com{domain}", headers=headers, verify=False
         )
         return response.cookies
-
-    def get_stay_data(self, id):
+    
+    def get_stay_soup(self, id):
         headers = dict(**self.base_headers)
         domain = ".br" if self.language == "pt_br" else ""
         url = f"https://www.airbnb.com{domain}/rooms/{id}"
@@ -61,6 +67,17 @@ class AirbnbScraper(object):
         )
 
         soup = BeautifulSoup(response.text, "html.parser")
+
+        return soup
+    
+    def get_stay_pictures(self, id):
+        soup = self.get_stay_soup(id)
+        pictures = [picture.find_all("source")[0]['srcset'].split()[0] for picture in soup.find_all("picture")]
+
+        return pictures
+
+    def get_stay_data(self, id):
+        soup = self.get_stay_soup(id)
         data_script = soup.find("script", {"id": "data-deferred-state-0"})
         data_json = json.loads(data_script.text)
         product_detail = data_json["niobeMinimalClientData"][0][1]["data"][

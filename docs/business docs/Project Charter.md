@@ -20,11 +20,7 @@ O projeto será realizado ao longo do semestre, com entregas em fases específic
 - **26/08/2024**: Entrega do TP1, primeira estruturação do projeto.
 - **23/09/2024**: Entrega do TP2, evoluções na aplicação streamlit e inclusão de nova base de dados (estatísticas da plataforma Airbnb)
 - **21/10/2024**: Entrega do TP3, evoluções na aplicação streamlit com adição de múltiplas páginas, ampliação da base de dados do Airbnb utilizando Selenium e implantação de uma API utilizando FastAPI.
-
-## Planejamento para introduzir recursos de IA via LLM
-- Na próxima entrega do Projeto serão introduzidos recursos de IA via LLM.
-- No momento atual do Projeto, só é possível fazer uma filtragem manual dos dados e procurar os dados relevantes na tabela.
-- Com a introdução do LLM, esse mecanismo de filtragem manual será substituído pela sugestão de hospedagens por parte do modelo, de acordo com a semelhança entre o prompt enviado pelo usuário e as hospedagens constantes na base. 
+- **02/12/2024**: Entrega do Projeto de Bloco. Implementação de recursos de IA via LLM. É feita a sugestão de hospedagens por parte do modelo, de acordo com a semelhança entre o prompt enviado pelo usuário e as hospedagens constantes na base.
 
 ## Riscos:
 - **Qualidade dos Dados:** Dados incompletos ou inconsistentes podem afetar a precisão das recomendações.

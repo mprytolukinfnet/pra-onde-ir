@@ -1,12 +1,12 @@
 # Projeto: Pra Onde Ir?
 
-**Teste de Performance (TP) 03**
+**Projeto de Bloco**
 
 **Disciplina:** Projeto de Bloco: Ciência de Dados Aplicada
 
 **Aluno:** Miguel Belardinelli Prytoluk
 
-**Data:** 21/10/2024
+**Data:** 02/11/2024
 
 ## Descrição do Projeto
 
@@ -18,12 +18,10 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
 
 ### Diretórios
 
-- **app**: Diretório contendo a aplicação demo desenvolvida em Streamlit.
-  - **config**: Configurações da aplicação.
-    - **cfg.json**: Arquivo de configurações da aplicação
-  - **model**: Modelos utilizados para previsão e recomendação de destinos.
+- **app**: Diretório contendo a aplicação desenvolvida em Streamlit.
   - **services**: Serviços auxiliares para processamento de dados.
-  - **pages**: Páginas da aplicação Streamlit.
+    - **generate_upload_vectors.py**: Script para gerar vetores das hospedagens do Airbnb e fazer o Upload para o Cluster Qdrant
+  - **st_pages**: Páginas da aplicação Streamlit.
   - **app.py**: Arquivo principal da aplicação Streamlit.
 - **api**: Diretório contendo a API da aplicação, necessária para a execução
   - **api.py**: Arquivo principal da API da aplicação.
@@ -55,7 +53,7 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
 - Python 3.12+
 - Bibliotecas listadas no `requirements.txt`
 
-### Instruções
+### Configurando a aplicação
 
 1. Criar Ambiente virtual e Ativar
 
@@ -70,29 +68,15 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
     pip install -r requirements.txt
   ```
 
-3. Executar a API
-  ```bash
-    cd api
-    uvicorn api:app --reload
-  ```
-  - É possível configurar o endereço que aplicação consulta a api no arquivo `/app/config/cfg.json`
-  - Após a execução da API, é possível acessar a sua documentação em http://127.0.0.1:8000/docs (altere caso seja utilizada outra url)
-
-
-4. Executar a aplicação Streamlit
-  ```bash
-    cd app
-    streamlit run app.py 
-  ```
-
-5. (OPCIONAL) Reexecutar a raspagem de dados da plataforma Airbnb -> o arquivo `airbnb_data.csv` é gerado diretamente na pasta `data`
+3. **(OPCIONAL)** Reexecutar a raspagem de dados da plataforma Airbnb -> o arquivo `airbnb_data.csv` é gerado diretamente na pasta `data`
   ```bash
     cd scraper
     python3 fetch.py 
   ```
+  - **Atenção:** esse processo é demorado!
   - Recomendado utilizar um VPN para fazer a extração, pois o Airbnb pode bloquear o IP após múltiplas requisições.
 
-6. (OPCIONAL) Reexecutar a raspagem das estatísticas da plataforma Airbnb -> os seguintes arquivos são gerados diretamente na pasta `data`:
+4. **(OPCIONAL)** Reexecutar a raspagem das estatísticas da plataforma Airbnb -> os seguintes arquivos são gerados diretamente na pasta `data`:
 - `airbnb_annual_net_income.csv`
 - `airbnb_annual_revenue.csv`
 - `airbnb_bookings.csv`
@@ -103,4 +87,45 @@ A estrutura de diretórios do projeto reflete as diferentes fases do ciclo de vi
 ```bash
   cd fetch_statistics
   python3 statistics.py 
+```
+
+5. Criar um Cluster Qdrant (free) em: https://qdrant.tech/
+
+6. Criar uma Chave de API Gemini em: https://aistudio.google.com/app/apikey
+
+7. Configurar o arquivo .env com as seguintes variáveis:
+```bash
+QDRANT_API_KEY=sua_chave_de_api_qdrant
+QDRANT_HOST=endereço_do_seu_cluster_qdrant
+GEMINI_API_KEY=sua_chave_de_api_gemini
+APP_API_URL=endereço_da_sua_api_da_aplicação(padrão: http://127.0.0.1:8000)
+```
+8. Gerar os vetores das hospedagens do Airbnb e fazer o Upload para o Cluster Qdrant
+```bash
+  cd app/services
+  python3 generate_upload_vectors.py
+```
+
+9. **(OPCIONAL)** Caso a aplicação seja rodada na Streamlit Cloud, é necessário configurar os secrets com o mesmo conteúdo do arquivo .env:
+```TOML
+QDRANT_API_KEY = "sua_chave_de_api_qdrant"
+QDRANT_HOST = "endereço_do_seu_cluster_qdrant"
+GEMINI_API_KEY = "sua_chave_de_api_gemini"
+APP_API_URL = "endereço_da_sua_api_da_aplicação(padrão: http://127.0.0.1:8000)"
+```
+
+### Executando a aplicação
+
+1. Executar a API
+```bash
+  cd api
+  uvicorn api:app --reload
+```
+- Após a execução da API, é possível acessar a sua documentação em http://127.0.0.1:8000/docs (altere caso seja utilizada outra url)
+
+
+2. Executar a aplicação Streamlit
+```bash
+  cd app
+  streamlit run app.py 
 ```
