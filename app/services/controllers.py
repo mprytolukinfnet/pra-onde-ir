@@ -81,7 +81,7 @@ async def load_pictures(img_placeholders):
             with img_placeholders['carousel_container'].container():
                 carousel(items=carousel_items, key=f"carousel_async")
         except:
-            img_placeholders.write('Não foi possível carregar as imagens do Airbnb.')
+            img_placeholders['cover_placeholder'].write('Não foi possível carregar as imagens do Airbnb.')
 
 
 # Run both async tasks
