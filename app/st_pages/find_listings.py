@@ -46,13 +46,13 @@ try:
                 st.subheader(state.best_listing['Name'])
                 st.markdown(f"[Veja no Airbnb](https://www.airbnb.com.br/rooms/{state.best_listing['Listing ID']})", unsafe_allow_html=True)
 
-                col1, col2 = st.columns([3, 2])
+                response_col1, response_col2 = st.columns([2, 3])
+                text_placeholder = response_col1.empty()
                 img_placeholders = {
-                    "cover_placeholder": col1.empty(),
-                    "carousel_placeholder": col1.empty(),
-                    "carousel_container": col1.empty()
+                    "cover_placeholder": response_col2.empty(),
+                    "carousel_placeholder": response_col2.empty(),
+                    "carousel_container": response_col2.empty()
                 }
-                text_placeholder = col2.empty()
 
                 if not state.description_complete or 'pictures' not in state:
                     get_description_and_pictures(text_placeholder, img_placeholders)
