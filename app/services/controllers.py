@@ -72,13 +72,17 @@ async def update_description(text_placeholder):
 # Load pictures
 async def load_pictures(img_placeholders):
     if 'pictures' not in state:
-        state.pictures = await get_listing_images_async(state.best_listing['Listing ID'])
-        img_placeholders['cover_placeholder'].image(state.pictures[0], use_column_width=True)
-        carousel_items = [dict(title="", text="", img=pic) for pic in state.pictures[1:]]
-        img_placeholders['carousel_placeholder'].write("### Outras fotos:")
-        img_placeholders['carousel_container'].empty()
-        with img_placeholders['carousel_container'].container():
-            carousel(items=carousel_items, key=f"carousel_async")
+        try:
+            state.pictures = await get_listing_images_async(state.best_listing['Listing ID'])
+            img_placeholders['cover_placeholder'].image(state.pictures[0], use_column_width=True)
+            carousel_items = [dict(title="", text="", img=pic) for pic in state.pictures[1:]]
+            img_placeholders['carousel_placeholder'].write("### Outras fotos:")
+            img_placeholders['carousel_container'].empty()
+            with img_placeholders['carousel_container'].container():
+                carousel(items=carousel_items, key=f"carousel_async")
+        except:
+            img_placeholders.write('Não foi possível carregar as imagens do Airbnb.')
+
 
 # Run both async tasks
 async def get_description_and_pictures_parallel(text_placeholder, img_placeholders):
