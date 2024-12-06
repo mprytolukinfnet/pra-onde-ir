@@ -120,15 +120,12 @@ def select_best_listing(data, NUM_SIMILAR_LISTINGS=5, select_with_llm = True):
         state.best_listing['Airbnb_URL'] = f"https://www.airbnb.com.br/rooms/{state.best_listing['Listing ID']}"
         del state.best_listing['Pictures']
 
-def download_csv():
+def download_csv_button(button_placeholder):
     csv = pd.DataFrame.from_dict([state.best_listing]).to_csv(index=False).encode('utf-8')
-    col1, col2, col3 = st.columns(3)
-
-    with col2 :
-        st.download_button(
-            "Download dos dados da hospedagem:",
-            csv,
-            f"Hospedagem_{state.best_listing['Listing ID']}.csv",
-            "text/csv",
-            key='download-csv'
-        )
+    button_placeholder.download_button(
+        "Download dos dados da hospedagem:",
+        csv,
+        f"Hospedagem_{state.best_listing['Listing ID']}.csv",
+        "text/csv",
+        key='download-csv'
+    )

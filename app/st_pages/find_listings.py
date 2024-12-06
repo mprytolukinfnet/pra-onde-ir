@@ -3,7 +3,7 @@ from streamlit_carousel import carousel
 import httpx
 
 from app.services.query_vectors import search_similar_listings
-from app.services.controllers import change_query, select_next_listing, get_data, get_description_and_pictures, select_best_listing, download_csv
+from app.services.controllers import change_query, select_next_listing, get_data, get_description_and_pictures, select_best_listing, download_csv_button
 
 # Title
 st.title("Busca Hospedagens")
@@ -53,6 +53,9 @@ try:
                     "carousel_placeholder": response_col2.empty(),
                     "carousel_container": response_col2.empty()
                 }
+                col1, col2, col3 = st.columns(3)
+                with col2:
+                    button_placeholder = st.empty()
 
                 if not state.description_complete or 'pictures' not in state:
                     get_description_and_pictures(text_placeholder, img_placeholders)
@@ -70,10 +73,11 @@ try:
                 if 'descriptive_text' in state:
                     text_placeholder.write(state.descriptive_text)
                     state.best_listing["descriptive_text"] = state.descriptive_text
-                    download_csv()
+                    download_csv_button(button_placeholder)
                     
                 else:
                     text_placeholder.write("Carregando descrição personalizada...")
+                    button_placeholder.empty()
             else:
                 st.warning("Nenhuma hospedagem similar encontrada. Tente refinar sua consulta.")
 except httpx.ConnectError as e:
