@@ -3,7 +3,7 @@ from streamlit_carousel import carousel
 import httpx
 
 from app.services.query_vectors import search_similar_listings
-from app.services.controllers import change_query, select_next_listing, get_data, get_description_and_pictures, select_best_listing
+from app.services.controllers import change_query, select_next_listing, get_data, get_description_and_pictures, select_best_listing, download_csv
 
 # Title
 st.title("Busca Hospedagens")
@@ -69,6 +69,9 @@ try:
 
                 if 'descriptive_text' in state:
                     text_placeholder.write(state.descriptive_text)
+                    state.best_listing["descriptive_text"] = state.descriptive_text
+                    download_csv()
+                    
                 else:
                     text_placeholder.write("Carregando descrição personalizada...")
             else:
