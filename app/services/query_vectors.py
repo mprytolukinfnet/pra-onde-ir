@@ -1,5 +1,6 @@
 from qdrant_client import QdrantClient
 from app.services.call_llm import generate_embeddings
+import sys
 
 try:
     import streamlit as st
@@ -47,7 +48,11 @@ def search_similar_listings(query, n=5, collection_name="listings_gemini", model
             setup_local_model()
         query_vector = model.encode([query], convert_to_tensor=True).tolist()[0]
     elif model_origin == "gemini":
-        query_vector = generate_embeddings(query).tolist()[0]
+        try:
+            query_vector = generate_embeddings(query).tolist()[0]
+        except:
+            if 'streamlit' in sys.modules:
+                st.warning("Erro na chamada à API do Modelo de Embeddings")
     else:
         raise ValueError("Unknown `model_origin` parameter value")
     

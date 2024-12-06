@@ -64,10 +64,13 @@ async def update_description(text_placeholder):
     if not state.description_complete:
         description_prompt = get_description_prompt(state.query, state.best_listing)
         state.descriptive_text = ""  # Initialize text incrementally
-        async for text_chunk in call_llm_stream(description_prompt):
-            state.descriptive_text += text_chunk
-            text_placeholder.write(state.descriptive_text)  # Real-time update
-        state.description_complete = True
+        try:
+            async for text_chunk in call_llm_stream(description_prompt):
+                state.descriptive_text += text_chunk
+                text_placeholder.write(state.descriptive_text)  # Real-time update
+            state.description_complete = True
+        except Exception:
+            st.warning("Erro na chamada à API do Modelo")
 
 # Load pictures
 async def load_pictures(img_placeholders):
@@ -109,6 +112,8 @@ def select_best_listing(data, NUM_SIMILAR_LISTINGS=5, select_with_llm = True):
                 except (ValueError, IndexError):
                     # If error, select first result
                     state.selected_idx = 0
+                except Exception:
+                    st.warning("Erro na chamada à API do Modelo")
         else:
             state.selected_idx = state.selected_idx if 'selected_idx' in state else 0
         state.best_listing = top_listings[state.selected_idx]
