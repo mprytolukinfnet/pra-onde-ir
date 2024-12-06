@@ -57,13 +57,15 @@ try:
                 if not state.description_complete or 'pictures' not in state:
                     get_description_and_pictures(text_placeholder, img_placeholders)
 
-                if 'pictures' in state:
+                if 'pictures' in state and len(state.pictures) > 0:
                     img_placeholders['cover_placeholder'].image(state.pictures[0], use_column_width=True)
                     carousel_items = [dict(title="", text="", img=pic) for pic in state.pictures[1:]]
                     img_placeholders['carousel_placeholder'].write("### Outras fotos:")
                     img_placeholders['carousel_container'].empty()
                     with img_placeholders['carousel_container'].container():
                         carousel(items=carousel_items, key=f"carousel_sync")
+                else:
+                    img_placeholders['cover_placeholder'].write('Não foi possível carregar as imagens do Airbnb.')
 
                 if 'descriptive_text' in state:
                     text_placeholder.write(state.descriptive_text)

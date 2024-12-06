@@ -1,8 +1,8 @@
 import requests, pickle, urllib3
 from bs4 import BeautifulSoup
+import json
 
 try:
-    import json
     import pandas as pd
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
@@ -56,7 +56,7 @@ class AirbnbScraper(object):
             f"https://www.airbnb.com{domain}", headers=headers, verify=False
         )
         return response.cookies
-    
+
     def get_stay_soup(self, id):
         headers = dict(**self.base_headers)
         domain = ".br" if self.language == "pt_br" else ""
@@ -69,10 +69,27 @@ class AirbnbScraper(object):
         soup = BeautifulSoup(response.text, "html.parser")
 
         return soup
-    
+
     def get_stay_pictures(self, id):
         soup = self.get_stay_soup(id)
-        pictures = [picture.find_all("source")[0]['srcset'].split()[0] for picture in soup.find_all("picture")]
+        #pictures = [picture.find_all("source")[0]['srcset'].split()[0] for picture in soup.find_all("picture")]
+
+        data_script = soup.find("script", {"id": "data-deferred-state-0"})
+        data_json = json.loads(data_script.text)
+
+        product_detail = data_json["niobeMinimalClientData"][0][1]["data"][
+            "presentation"
+        ]["stayProductDetailPage"]["sections"]["sections"]
+
+        preview_images = [
+            s
+            for s in product_detail
+            if isinstance(s, dict)
+            and "section" in s
+            and s["sectionId"] == "HERO_DEFAULT"
+        ][0]["section"]["previewImages"]
+
+        pictures = [img["baseUrl"] for img in preview_images][:5]
 
         return pictures
 
@@ -86,12 +103,12 @@ class AirbnbScraper(object):
 
         name = ""
         personCapacity = ""
-        roomType=""
-        rating=0
-        reviews=0
+        roomType = ""
+        rating = 0
+        reviews = 0
         title = ""
-        latitude=""
-        longitude=""
+        latitude = ""
+        longitude = ""
         description = ""
         amenities = []
         pictures = []
@@ -99,7 +116,7 @@ class AirbnbScraper(object):
         # Embed_data
         embed_data = []
 
-        embed_data_section  = [
+        embed_data_section = [
             s
             for s in product_detail
             if isinstance(s, dict)
@@ -122,9 +139,9 @@ class AirbnbScraper(object):
             reviews = embed_data["reviewCount"]
 
         # Title
-        sbui_data = data_json["niobeMinimalClientData"][0][1]["data"][
-            "presentation"
-        ]["stayProductDetailPage"]["sections"]["sbuiData"]["sectionConfiguration"]["root"]["sections"]
+        sbui_data = data_json["niobeMinimalClientData"][0][1]["data"]["presentation"][
+            "stayProductDetailPage"
+        ]["sections"]["sbuiData"]["sectionConfiguration"]["root"]["sections"]
 
         title_section = [
             s
@@ -151,7 +168,9 @@ class AirbnbScraper(object):
         ]
 
         if len(description_section) > 0:
-            description = description_section[0]["section"]["htmlDescription"]["htmlText"]
+            description = description_section[0]["section"]["htmlDescription"][
+                "htmlText"
+            ]
             if description:
                 description = description.replace("\n", " ").replace("\t", " ")
 
@@ -167,8 +186,8 @@ class AirbnbScraper(object):
         ]
 
         if len(amenities_groups) > 0:
-            ag = amenities_groups[0]["section"]['seeAllAmenitiesGroups']
-            amenities = [ a["title"] for ag in ag for a in ag["amenities"]    ]
+            ag = amenities_groups[0]["section"]["seeAllAmenitiesGroups"]
+            amenities = [a["title"] for ag in ag for a in ag["amenities"]]
 
         # Pictures
         pictures_groups = [
@@ -182,8 +201,8 @@ class AirbnbScraper(object):
         ]
 
         if len(pictures_groups) > 0:
-            pg = pictures_groups[0]["section"]['mediaItems']
-            pictures = [ p["baseUrl"] for p in pg ]
+            pg = pictures_groups[0]["section"]["mediaItems"]
+            pictures = [p["baseUrl"] for p in pg]
 
         # Coordinates
         coordinates_section = [
@@ -204,19 +223,19 @@ class AirbnbScraper(object):
             longitude = coordinates["lng"]
 
         return {
-            'name': name,
-            'title': title,
-            'roomType': roomType,
-            'personCapacity': personCapacity,
-            'rating': rating,
-            'reviews': reviews,
-            'latitude': latitude,
-            'longitude': longitude,
-            'description': description,
-            'amenities': amenities,
-            'pictures': pictures
+            "name": name,
+            "title": title,
+            "roomType": roomType,
+            "personCapacity": personCapacity,
+            "rating": rating,
+            "reviews": reviews,
+            "latitude": latitude,
+            "longitude": longitude,
+            "description": description,
+            "amenities": amenities,
+            "pictures": pictures,
         }
-    
+
     def get_stay_details(self, stays, region):
         def process_listing(stay):
             id = stay["id"]
@@ -227,7 +246,19 @@ class AirbnbScraper(object):
                 stay_data = self.get_stay_data(id)
             except:
                 return dict()
-            name, title, roomType, personCapacity, rating, reviews, latitude, longitude, description, amenities, pictures = (
+            (
+                name,
+                title,
+                roomType,
+                personCapacity,
+                rating,
+                reviews,
+                latitude,
+                longitude,
+                description,
+                amenities,
+                pictures,
+            ) = (
                 stay_data["name"],
                 stay_data["title"],
                 stay_data["roomType"],
@@ -238,7 +269,7 @@ class AirbnbScraper(object):
                 stay_data["longitude"],
                 stay_data["description"],
                 stay_data["amenities"],
-                stay_data["pictures"]
+                stay_data["pictures"],
             )
             # Extracting data
             return {
@@ -268,18 +299,25 @@ class AirbnbScraper(object):
         df = pd.DataFrame(results)
 
         return df
-    
+
     def get_stays_list(self):
         # Wait for element
         try:
             WebDriverWait(self.driver, 10).until(
-                EC.visibility_of_element_located((By.XPATH, '//*[@id="site-content"]/div/div[2]/div/div/div/div/div/div[1]/div/div[2]/div/div/div/div/a'))
+                EC.visibility_of_element_located(
+                    (
+                        By.XPATH,
+                        '//*[@id="site-content"]/div/div[2]/div/div/div/div/div/div[1]/div/div[2]/div/div/div/div/a',
+                    )
+                )
             )
         except TimeoutException as ex:
             # Não existe mais um botão
             return None
         # Find all the divs under the specified parent div
-        parent_divs = self.driver.find_elements(By.XPATH, '//*[@id="site-content"]/div/div[2]/div/div/div/div/div/div')
+        parent_divs = self.driver.find_elements(
+            By.XPATH, '//*[@id="site-content"]/div/div[2]/div/div/div/div/div/div'
+        )
 
         # List to store all hrefs
         stays = []
@@ -289,14 +327,14 @@ class AirbnbScraper(object):
             try:
                 # Construct the dynamic XPath for each 'a' tag inside the div[i]
                 a_tag_xpath = f'//*[@id="site-content"]/div/div[2]/div/div/div/div/div/div[{i}]/div/div[2]/div/div/div/div/a'
-                
+
                 # Find the 'a' tag using the dynamic XPath
                 a_tag = self.driver.find_element(By.XPATH, a_tag_xpath)
-                
+
                 # Extract the href attribute if available
-                href = a_tag.get_attribute('href')
+                href = a_tag.get_attribute("href")
                 if href:
-                    match = re.search(r'/rooms/(\d+)\?', href)
+                    match = re.search(r"/rooms/(\d+)\?", href)
                     if match:
                         id = match.group(1)
                         price_tag_xpath = f'//*[@id="site-content"]/div/div[2]/div/div/div/div/div/div[{i}]/div/div[2]/div/div/div/div/div/div[2]/div[5]/div[2]/div/div/span/div/span[position() = (last() - 1)]'
@@ -304,24 +342,28 @@ class AirbnbScraper(object):
                         price_tag = self.driver.find_element(By.XPATH, price_tag_xpath)
                         price_str = price_tag.text
                         price = int(
-                            price_str.replace("R$", "").replace(",", "").replace(".", "")
+                            price_str.replace("R$", "")
+                            .replace(",", "")
+                            .replace(".", "")
                         )
                         badge = ""
                         badge_xpath = f'//*[@id="site-content"]/div/div[2]/div/div/div/div/div/div[{i}]/div/div[2]/div/div/div/div/div/div[1]/div/div/div[1]/div/div[1]/div[1]/div/span'
-                        badge_elements = self.driver.find_elements(By.XPATH, badge_xpath)
+                        badge_elements = self.driver.find_elements(
+                            By.XPATH, badge_xpath
+                        )
                         if badge_elements:
                             # If the list is not empty, the element exists, and you can access the text
                             badge = badge_elements[0].text
                         else:
                             # If the list is empty, no badge was found
                             badge = None
-                        stays.append({'id': id, 'price': price, 'badge': badge})
+                        stays.append({"id": id, "price": price, "badge": badge})
             except Exception as e:
                 # print(f"Error extracting href from div[{i}]: {e}")
                 pass
 
         return stays
-    
+
     def get_stays(self, region):
         print(f"Getting stays from: `{region}`")
 
@@ -389,7 +431,7 @@ class AirbnbScraper(object):
             "Sergipe",
             "Tocantins",
         ]
-        self.driver = uc.Chrome(headless=False,use_subprocess=False)
+        self.driver = uc.Chrome(headless=False, use_subprocess=False)
         dfs = [self.get_stays(region) for region in regions]
         self.driver.quit()
         return pd.concat(dfs, ignore_index=True)

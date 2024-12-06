@@ -1,0 +1,3538 @@
+{
+  "server": [],
+  "initializer": [
+    [
+      "ExperimentsDataToken",
+      {
+        "experiences_host_acquisition_improved_header_cta_v2": {
+          "subject": "visitor",
+          "buckets": 200,
+          "percent_exposed": 100,
+          "treatments": [
+            { "name": "control", "buckets": 100 },
+            { "name": "treatment", "buckets": 100 }
+          ],
+          "hashing_key": "experiences_host_acquisition_improved_header_cta",
+          "sitar_overrides": {},
+          "trebuchets": []
+        },
+        "web_tcpa_compliance": {
+          "subject": "user",
+          "buckets": 100,
+          "percent_exposed": 100,
+          "treatments": [{ "name": "treatment", "buckets": 100 }],
+          "hashing_key": "web_tcpa_compliance",
+          "sitar_overrides": {},
+          "trebuchets": []
+        },
+        "installed_pwa": {
+          "subject": "visitor",
+          "buckets": 2,
+          "percent_exposed": 10,
+          "treatments": [
+            { "name": "control", "buckets": 1 },
+            { "name": "treatment", "buckets": 1 }
+          ],
+          "hashing_key": "installed_pwa",
+          "sitar_overrides": {},
+          "trebuchets": []
+        },
+        "installed_pwa_parallel": {
+          "subject": "visitor",
+          "buckets": 2,
+          "percent_exposed": 10,
+          "treatments": [
+            { "name": "control", "buckets": 1 },
+            { "name": "treatment", "buckets": 1 }
+          ],
+          "hashing_key": "installed_pwa_parallel",
+          "sitar_overrides": {},
+          "trebuchets": []
+        },
+        "contact_us_redirect_to_contact_us_form_on_rate_limit": {
+          "subject": "visitor",
+          "buckets": 100,
+          "percent_exposed": 100,
+          "treatments": [{ "name": "treatment", "buckets": 100 }],
+          "hashing_key": "contact_us_redirect_to_contact_us_form_on_rate_limit",
+          "sitar_overrides": {},
+          "trebuchets": []
+        }
+      }
+    ],
+    ["CdnExperimentsToken", {}],
+    [
+      "FlaggerReactClientDataToken",
+      {
+        "airParams": {
+          "recently_viewed_listings": {
+            "enabled": {
+              "value": { "booleanValue": false },
+              "assignment": null
+            }
+          }
+        },
+        "features": {
+          "web_prefetch_framework_v1": {
+            "assignedTreatment": "treatment_high",
+            "featureName": "web_prefetch_framework_v1",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "12"
+          },
+          "web_api_brotli_compression_v3": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "web_api_brotli_compression_v3",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "13",
+            "extraData": { "treatment_reason": "missing_header" }
+          },
+          "hyperloop_stable_injectprops": {
+            "assignedTreatment": "control",
+            "featureName": "hyperloop_stable_injectprops",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "16"
+          },
+          "prefetch_hinting_avif_web_v1": {
+            "assignedTreatment": "treatment",
+            "featureName": "prefetch_hinting_avif_web_v1",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "8"
+          },
+          "web_avif_rollout_v2": {
+            "assignedTreatment": "treatment",
+            "featureName": "web_avif_rollout_v2",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "10"
+          },
+          "web_fuzzy_rollout_v1": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "web_fuzzy_rollout_v1",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "7",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "react_18_cgl_new_root_api_v4": {
+            "assignedTreatment": "control",
+            "featureName": "react_18_cgl_new_root_api_v4",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "5"
+          },
+          "users_soa_web_oauth_facebook": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "users_soa_web_oauth_facebook",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "11",
+            "extraData": { "treatment_reason": "out_of_experiment" }
+          },
+          "users_soa_web_oauth_google_v10": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "users_soa_web_oauth_google_v10",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "6",
+            "extraData": { "treatment_reason": "out_of_experiment" }
+          },
+          "users_soa_web_oauth_naver_v8": {
+            "assignedTreatment": "treatment",
+            "featureName": "users_soa_web_oauth_naver_v8",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "8"
+          },
+          "japan_places_recommendation_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "japan_places_recommendation_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "24"
+          },
+          "korea_places_recommendation_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "korea_places_recommendation_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "10"
+          },
+          "hongkong_macao_taiwan_places_recommendation_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "hongkong_macao_taiwan_places_recommendation_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "11"
+          },
+          "china_mainland_condensed_review_flow_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "china_mainland_condensed_review_flow_web",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "13",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "japan_condensed_review_flow_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "japan_condensed_review_flow_web",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "12",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "korea_condensed_review_flow_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "korea_condensed_review_flow_web",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "11",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "hongkong_macao_taiwan_condensed_review_flow_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "hongkong_macao_taiwan_condensed_review_flow_web",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "10",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "hawaii20_short_leading_ib_tooltip_kr": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "hawaii20_short_leading_ib_tooltip_kr",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "3",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "hawaii20_short_leading_ib_tooltip_jp": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "hawaii20_short_leading_ib_tooltip_jp",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "4",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "hawaii20_short_leading_ib_tooltip_cnhmt": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "hawaii20_short_leading_ib_tooltip_cnhmt",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "6",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "web_remove_refer_host_entrypoint": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "web_remove_refer_host_entrypoint",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "8",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "m3_csp_safeguard_footer_and_help_article": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "m3_csp_safeguard_footer_and_help_article",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "73",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "web_prefetch_p2_map_viewport": {
+            "assignedTreatment": "control",
+            "featureName": "web_prefetch_p2_map_viewport",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "8"
+          },
+          "hawaii2o_autosuggestions_model_1_v2_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "hawaii2o_autosuggestions_model_1_v2_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "47",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "cjk_hawaii2o_autosuggestions_model_1_cn_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "cjk_hawaii2o_autosuggestions_model_1_cn_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "6",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "cjk_hawaii2o_autosuggestions_model_1_kr_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "cjk_hawaii2o_autosuggestions_model_1_kr_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "2",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "cjk_hawaii2o_autosuggestions_model_1_hmt_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "cjk_hawaii2o_autosuggestions_model_1_hmt_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "1",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "hawaii20_calendar_tip_weekly_monthly_web_desktop": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "hawaii20_calendar_tip_weekly_monthly_web_desktop",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "7",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "pdp_search_bar_with_search_params": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "pdp_search_bar_with_search_params",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "5",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "web_mux_video_metrics": {
+            "assignedTreatment": "treatment",
+            "featureName": "web_mux_video_metrics",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "6"
+          },
+          "wishlist_new_data_store_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "wishlist_new_data_store_web",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "7",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "m1_checkout_video_loader_web_v2": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "m1_checkout_video_loader_web_v2",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "17",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "return_to_quick_pay_after_resume_payment_failure": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "return_to_quick_pay_after_resume_payment_failure",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "13",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "payments_pa_cb_india_interim": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "payments_pa_cb_india_interim",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "106",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "external_linking_interstitial": {
+            "assignedTreatment": "treatment",
+            "featureName": "external_linking_interstitial",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "39"
+          },
+          "identity_mobile_handoff_with_update_notification_text": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "identity_mobile_handoff_with_update_notification_text",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "4",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "google_maps_version_3_58": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "google_maps_version_3_58",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "5",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "m1_upload_profile_photos_aa": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "m1_upload_profile_photos_aa",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "6",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "m1_upload_profile_photos": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "m1_upload_profile_photos",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "10",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "map_style_2024_november_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "map_style_2024_november_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "16",
+            "extraData": { "treatment_reason": "out_of_experiment" }
+          },
+          "media_preload_image_link_prefetch_q4_2024": {
+            "assignedTreatment": "treatment",
+            "featureName": "media_preload_image_link_prefetch_q4_2024",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "7"
+          },
+          "cjk_passport_stats_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "cjk_passport_stats_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "15"
+          },
+          "checkout_disable_prefetch_logged_out_web_v2": {
+            "assignedTreatment": "control",
+            "featureName": "checkout_disable_prefetch_logged_out_web_v2",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "13"
+          },
+          "pdp_vector_map_v1_desktop": {
+            "assignedTreatment": "treatment",
+            "featureName": "pdp_vector_map_v1_desktop",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "13"
+          },
+          "enable_map_prefetching_moweb": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "enable_map_prefetching_moweb",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "33",
+            "extraData": { "treatment_reason": "due_to_target" }
+          },
+          "enable_map_prefetching_desktop": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "enable_map_prefetching_desktop",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "57",
+            "extraData": { "treatment_reason": "due_to_target" }
+          },
+          "map_prefetching_homepage_moweb": {
+            "assignedTreatment": "treatment",
+            "featureName": "map_prefetching_homepage_moweb",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "21"
+          },
+          "map_prefetching_homepage_desktop": {
+            "assignedTreatment": "treatment",
+            "featureName": "map_prefetching_homepage_desktop",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "41"
+          },
+          "pdp_inline_map_expand_button_moweb": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "pdp_inline_map_expand_button_moweb",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "4",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "prefer_map_filter_bounds_on_poi_searches": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "prefer_map_filter_bounds_on_poi_searches",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "6",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "prefer_map_filter_bounds_on_all_searches": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "prefer_map_filter_bounds_on_all_searches",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "5",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "android_moweb_app_install_banner_ph_2": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "android_moweb_app_install_banner_ph_2",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "10",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "ios_moweb_app_install_banner_ph_2": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "ios_moweb_app_install_banner_ph_2",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "23",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "payments_przelewy24_redirect": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "payments_przelewy24_redirect",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "22",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "payments_vipps_redirect": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "payments_vipps_redirect",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "24",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "payments_mobile_pay_redirect_dk": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "payments_mobile_pay_redirect_dk",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "16",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "payments_momo_wallet_redirect": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "payments_momo_wallet_redirect",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "22",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "payments_czech_online_banking": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "payments_czech_online_banking",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "16",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "payments_mpesa_redirect": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "payments_mpesa_redirect",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "17",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "adyen_india_upi_qr_v2": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "adyen_india_upi_qr_v2",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "14",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "gtag_with_partytown_non_brand_domains_4": {
+            "assignedTreatment": "treatment",
+            "featureName": "gtag_with_partytown_non_brand_domains_4",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "10"
+          },
+          "china_compliance_domain_v5": {
+            "assignedTreatment": "control",
+            "featureName": "china_compliance_domain_v5",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "25"
+          },
+          "signup_suggest_continue_with_facebook_last": {
+            "assignedTreatment": "treatment",
+            "featureName": "signup_suggest_continue_with_facebook_last",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "8"
+          },
+          "checkout_p5_remove_experience_upsell_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "checkout_p5_remove_experience_upsell_web",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "13",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "web_profile_photo_upload_mum": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "web_profile_photo_upload_mum",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "10",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "m1_passport_profile_reordering": {
+            "assignedTreatment": "control",
+            "featureName": "m1_passport_profile_reordering",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "16"
+          },
+          "web_inbox_sync_protocol": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "web_inbox_sync_protocol",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "27",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "h20_rtb_retraction_redesign": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "h20_rtb_retraction_redesign",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "26",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "media_foundation_q4_2024_web_p2_to_p3_prefetch": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "media_foundation_q4_2024_web_p2_to_p3_prefetch",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "19",
+            "extraData": { "treatment_reason": "due_to_disable_switch" }
+          },
+          "web_cookie_banner_bright_pattern": {
+            "assignedTreatment": "treatment_1",
+            "featureName": "web_cookie_banner_bright_pattern",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "27"
+          },
+          "m3_csp_safeguard_guest_entry_profile": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "m3_csp_safeguard_guest_entry_profile",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "71",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "account_settings_facebook_connect_deprecation_v0": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "account_settings_facebook_connect_deprecation_v0",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "6",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "improved_coupon_center_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "improved_coupon_center_web",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "26",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "atomic_calendar_search_moweb": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "atomic_calendar_search_moweb",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "11",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          },
+          "hawaii20_calendar_tip_weekly_monthly_moweb": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "hawaii20_calendar_tip_weekly_monthly_moweb",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "7",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "listing_card_migration_sxs_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "listing_card_migration_sxs_web",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "18",
+            "extraData": { "treatment_reason": "out_of_experiment" }
+          },
+          "stays_search_layout_page_slot_order_map_over_feed_desktop": {
+            "assignedTreatment": "control",
+            "featureName": "stays_search_layout_page_slot_order_map_over_feed_desktop",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "10"
+          },
+          "price_filter_adjustments_2024_moweb": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "price_filter_adjustments_2024_moweb",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "3",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "price_filter_adjustments_2024_web": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "price_filter_adjustments_2024_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "2",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "selected_filters_2024_moweb": {
+            "assignedTreatment": "treatment",
+            "featureName": "selected_filters_2024_moweb",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "16"
+          },
+          "selected_filters_2024_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "selected_filters_2024_web",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "16"
+          },
+          "places_filter_ranking_optimization_japan_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "places_filter_ranking_optimization_japan_web",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "7"
+          },
+          "places_filter_ranking_optimization_korea_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "places_filter_ranking_optimization_korea_web",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "6"
+          },
+          "places_filter_ranking_optimization_hmt_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "places_filter_ranking_optimization_hmt_web",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "6"
+          },
+          "recommended_filters_v2_2024_moweb": {
+            "assignedTreatment": "treatment",
+            "featureName": "recommended_filters_v2_2024_moweb",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "13"
+          },
+          "recommended_filters_v2_2024_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "recommended_filters_v2_2024_web",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "11"
+          },
+          "concurrent_search_input": {
+            "assignedTreatment": "treatment",
+            "featureName": "concurrent_search_input",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "15"
+          },
+          "moweb_use_search_listing_card_data_in_pdp_skeleton": {
+            "assignedTreatment": "treatment",
+            "featureName": "moweb_use_search_listing_card_data_in_pdp_skeleton",
+            "shouldLogExposure": false,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "11"
+          },
+          "m13_search_bar_phase1_moweb": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "m13_search_bar_phase1_moweb",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "3",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "map_large_view_on_search_moweb_aa": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "map_large_view_on_search_moweb_aa",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "1",
+            "extraData": { "treatment_reason": "exp_start_date_in_future" }
+          },
+          "map_large_view_on_search_moweb": {
+            "assignedTreatment": "treatment",
+            "featureName": "map_large_view_on_search_moweb",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "25"
+          },
+          "experiences_p2_m13_validation_web": {
+            "assignedTreatment": "treatment_2",
+            "featureName": "experiences_p2_m13_validation_web",
+            "shouldLogExposure": true,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "14"
+          },
+          "experiences_hide_filter_bar_erf_web": {
+            "assignedTreatment": "treatment",
+            "featureName": "experiences_hide_filter_bar_erf_web",
+            "shouldLogExposure": false,
+            "subject": "identity",
+            "subjectId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "16"
+          },
+          "web_jitney_compression_v2": {
+            "assignedTreatment": "treatment",
+            "featureName": "web_jitney_compression_v2",
+            "shouldLogExposure": true,
+            "subject": "visitor",
+            "subjectId": "1733494442_EANmYzMDliNmRjN2",
+            "sitarVersion": "11"
+          },
+          "airlock_cdui_phone_country_migration_revisit": {
+            "assignedTreatment": "treatment_unknown",
+            "featureName": "airlock_cdui_phone_country_migration_revisit",
+            "shouldLogExposure": false,
+            "subject": "user",
+            "sitarVersion": "8",
+            "extraData": {
+              "treatment_reason": "subject_id_is_null_and_flag_true"
+            }
+          }
+        },
+        "trebuchets": {
+          "web.networking_service_prefetch_kill_switch": {
+            "isLaunched": false
+          },
+          "disable-scroll-driven-polyfill": { "isLaunched": false },
+          "fetch-scroll-driven-stylesheets": { "isLaunched": false },
+          "trebuchet_launch_iso_client": { "isLaunched": false },
+          "kill_connection_status_provider": { "isLaunched": false },
+          "ui_state.enable_logging": { "isLaunched": false },
+          "tos_kill_switch_web": { "isLaunched": true },
+          "tos.toggle_booking_flow_check": { "isLaunched": true },
+          "kill_web_websocket_client_ping": { "isLaunched": false },
+          "trust_ai_disable_recaptchav3": { "isLaunched": true },
+          "google_recaptcha_v3_web_logging": { "isLaunched": true },
+          "instrument_search_results_images": { "isLaunched": true },
+          "pps_web_enable_alt": { "isLaunched": false },
+          "web.niobe.normalized_subscription_killswitch": {
+            "isLaunched": true
+          },
+          "web_normalization_rearchitecture_killswitch": { "isLaunched": true },
+          "monorail_deprecation.capture_v2_call_sites.web": {
+            "isLaunched": true
+          },
+          "monorail_deprecation.capture_v2_call_sites.web.include_common_endpoints": {
+            "isLaunched": false
+          },
+          "enable.user_consent_data_layer.logging": { "isLaunched": true },
+          "enable.user_consent_data_layer.dl_publishing": {
+            "isLaunched": true
+          },
+          "partytown_gtm_force_enabled": { "isLaunched": false },
+          "eight_bit_belo_localhost_force": { "isLaunched": false },
+          "eight_bit_belo": { "isLaunched": true },
+          "web_tld_privacy_regions": { "isLaunched": true },
+          "messaging_standard_action_history_handler": { "isLaunched": true },
+          "web.deprecate_monorail_profile_img": { "isLaunched": true },
+          "header_avatar_web_enabled": { "isLaunched": true },
+          "web_bypass_manual_flush": { "isLaunched": true },
+          "web_bypass_manual_flush_force": { "isLaunched": false },
+          "ehlp.disable": { "isLaunched": false },
+          "profile-button.balanced-sizing": { "isLaunched": true },
+          "optimize_img_sources_beyond_viewport": { "isLaunched": true },
+          "enable_web_prefetch_hinting": { "isLaunched": true },
+          "language_selector.show_mrkn": { "isLaunched": false },
+          "portals_ssr_mismatch_fix": { "isLaunched": true },
+          "force_react_18_new_root_api": { "isLaunched": false },
+          "force_disable_concurrent_slots": { "isLaunched": false },
+          "force_enable_concurrent_slots": { "isLaunched": false },
+          "web.a11y.enable_landscape": { "isLaunched": false },
+          "payments.sanctions.exclude_ruble_currency_from_selector_web": {
+            "isLaunched": true
+          },
+          "payins.currency.update_url_param": { "isLaunched": true },
+          "api_web_client_migration.fejax.enabled": { "isLaunched": true },
+          "api_web_client_migration.fejax.signup_login_dls_shared.kill_switch": {
+            "isLaunched": true
+          },
+          "niobe.rest.error_logging.kill_switch": { "isLaunched": false },
+          "hodor_sxs_enabled": { "isLaunched": false },
+          "force_in_hodor_signup_for_web": { "isLaunched": false },
+          "force_in_soa_web_login": { "isLaunched": false },
+          "users_soa_web_oauth_facebook_force_in": { "isLaunched": false },
+          "users_soa_web_oauth_facebook_launch": { "isLaunched": false },
+          "users_soa_web_oauth_apple_force_in": { "isLaunched": false },
+          "users_soa_web_oauth_apple_launch": { "isLaunched": true },
+          "users_soa_web_oauth_google_force_in": { "isLaunched": false },
+          "users_soa_web_oauth_google_launch": { "isLaunched": true },
+          "users_soa_web_oauth_naver_force_in": { "isLaunched": false },
+          "users_soa_web_oauth_naver_launch": { "isLaunched": true },
+          "web.phone_recycling.force_out": { "isLaunched": false },
+          "web.phone_recycling.force_in": { "isLaunched": false },
+          "web.phone_recycling": { "isLaunched": false },
+          "guest_header.host_referrals_header_item_force": {
+            "isLaunched": false
+          },
+          "condensed_review_flow_web_force_out": { "isLaunched": true },
+          "condensed_review_flow_web_force_in": { "isLaunched": false },
+          "resizeobserver_no_raf_boundary": { "isLaunched": false },
+          "dragon5_china_licenses_web_force_in": { "isLaunched": false },
+          "display_german_tuv_cookie_policy_link": { "isLaunched": true },
+          "permanent_sale_opt_out_article_force_in": { "isLaunched": false },
+          "permanent_sale_opt_out_article_force_out": { "isLaunched": false },
+          "permanent_sale_opt_out_article": { "isLaunched": false },
+          "display_footer_cookie_policy_link": { "isLaunched": false },
+          "storefronts_giftcards_footer_link_enabled": { "isLaunched": false },
+          "simple_footer.enable_host_classes_link": { "isLaunched": true },
+          "ad_landing_restrict_access": { "isLaunched": false },
+          "m3_csp_safeguard_desktop_footer_force_in": { "isLaunched": false },
+          "m3_csp_safeguard_global": { "isLaunched": false },
+          "m3_csp_safeguard_desktop_footer": { "isLaunched": true },
+          "merch_monthly_weekly_calendar_tip_disable_impression_capping_web": {
+            "isLaunched": false
+          },
+          "disable_lottie_main_thread": { "isLaunched": false },
+          "enable_lottie_expressions": { "isLaunched": false },
+          "h2o_autocomplete_custom_num_of_results": { "isLaunched": false },
+          "web.search_input_h2o_autosuggestions.force_in": {
+            "isLaunched": false
+          },
+          "web.search_input_h2o_autocomplete.force_in": { "isLaunched": false },
+          "merch_monthly_weekly_calendar_tip_web": { "isLaunched": false },
+          "form_factor.panel_form_factor.enabled": { "isLaunched": false },
+          "web_delay_scroll_to_top_on_client_side_routing": {
+            "isLaunched": true
+          },
+          "gp.web.screen_manager_future": { "isLaunched": false },
+          "gp.web.screen_manager_controls_modals": { "isLaunched": false },
+          "gp.web.magic_move": { "isLaunched": false },
+          "gp_web_stable_layouts": { "isLaunched": true },
+          "gp_jumbo_modal_hide_header": { "isLaunched": true },
+          "gp.web.set_modal_padding": { "isLaunched": true },
+          "gp.web.set_is_modal_context": { "isLaunched": true },
+          "web_scroll_direction_change_enabled": { "isLaunched": false },
+          "web_scroll_direction_change_launched": { "isLaunched": false },
+          "gp.dont_render_nav_placement_if_empty": { "isLaunched": true },
+          "page_slot_force_separate_render": { "isLaunched": true },
+          "enable_react_profiler_query_param": { "isLaunched": false },
+          "pageslot_cookie_config_override": { "isLaunched": false },
+          "gp-section-wrapper-display-contents": { "isLaunched": true },
+          "explore_gp.use_compact_layout_on_wide_pwa": { "isLaunched": false },
+          "enable_paint_containment_drawer": { "isLaunched": false },
+          "strict_search_containment_moweb": { "isLaunched": true },
+          "reduce_p2_drawer_layers": { "isLaunched": true },
+          "today_tab.web.masked_phone_number": { "isLaunched": true },
+          "media_foundation.web.hls_cap_level_to_player_size": {
+            "isLaunched": true
+          },
+          "web.video-performance-metrics": { "isLaunched": false },
+          "a4p_header_footer_entry": { "isLaunched": true },
+          "china_m3_private_room": { "isLaunched": false },
+          "china_outbound.m3_safety_line.chatbot_entry": {
+            "isLaunched": false
+          },
+          "web.proative_wishlist.force": { "isLaunched": true },
+          "web.proative_wishlist_v2.force": { "isLaunched": true },
+          "wishlist_allow_new_share_link_web": { "isLaunched": true },
+          "enable_new_native_share": { "isLaunched": true },
+          "facebook_sdk_kill_switch": { "isLaunched": false },
+          "facebook_sdk_default_off_country_toggle": { "isLaunched": true },
+          "enable_carousel_contentvisibility": { "isLaunched": false },
+          "gp.core_ui.update_text_area_from_other_sections": {
+            "isLaunched": true
+          },
+          "stays_pdp_show_auto_expand_textarea": { "isLaunched": true },
+          "gp.forms.reset-errors-on-unmount": { "isLaunched": true },
+          "payments.india.adyen.india.vaulting.enabled": {
+            "isLaunched": false
+          },
+          "payments.quick_pay.coupon_a11y.force_in": { "isLaunched": false },
+          "payments.quick_pay.coupon_a11y.enabled": { "isLaunched": false },
+          "confirm_and_pay_loader_v2_payment_friction_force": {
+            "isLaunched": false
+          },
+          "confirm_and_pay_loader_v2_blocked_reservation_friction_kill_switch": {
+            "isLaunched": false
+          },
+          "m1_checkout_video_loader_web_force": { "isLaunched": false },
+          "m1_checkout_video_loader_web": { "isLaunched": true },
+          "payments.show_resume_payment_failure_message": {
+            "isLaunched": true
+          },
+          "plugin.adyen.india.upi.modal.migration": { "isLaunched": false },
+          "plugin.adyen.india.upi_id.modal.migration": { "isLaunched": false },
+          "payments.new_user_verification_flow.generic_qr.enabled": {
+            "isLaunched": true
+          },
+          "quick_pay.wechat.modal.migration": { "isLaunched": false },
+          "plugin.adyen.belgium.payconiq.mobile": { "isLaunched": false },
+          "quick_pay.fpx.use_generic_bank_selection": { "isLaunched": false },
+          "payments.quickpay.support_discover_on_inr": { "isLaunched": false },
+          "quick_pay.razorpay.skip_payment_loader": { "isLaunched": false },
+          "payments.quickpay.omit_tokens": { "isLaunched": false },
+          "plugin_adyen_india.upi.id.vaulting.enabled": { "isLaunched": false },
+          "quick_pay.prevent_null_selected_payment_option": {
+            "isLaunched": false
+          },
+          "payments.regulatory_compliance.sca.fingerprint_warmup": {
+            "isLaunched": true
+          },
+          "payments.regulatory_compliance.enable_proactive_sca_for_new_routes": {
+            "isLaunched": false
+          },
+          "payments.regulatory_compliance.reuse_bt_client_token": {
+            "isLaunched": false
+          },
+          "payments.viaduct.guest_sca.create_instrument.google_pay": {
+            "isLaunched": true
+          },
+          "payments.inr.pa.cb.enable": { "isLaunched": false },
+          "quickpay.web.get_checkout_api_request_content": {
+            "isLaunched": true
+          },
+          "argo.filter_out_rub": { "isLaunched": true },
+          "quickpay.postreloadfocus.currency": { "isLaunched": false },
+          "identity.web.legal_name.use_custom_fov_modal": {
+            "isLaunched": true
+          },
+          "api_web_client_migration.fejax.account_fov.kill_switch": {
+            "isLaunched": true
+          },
+          "identity.enable_handoff_to_phone_number_collected": {
+            "isLaunched": true
+          },
+          "korean_account_fov_use_universal_link_instead_of_scheme": {
+            "isLaunched": true
+          },
+          "identity.enable_switched_order_select_type": { "isLaunched": false },
+          "web_auto_capture_redesign_force_in": { "isLaunched": false },
+          "gov_id_auto_capture_redesign": { "isLaunched": false },
+          "identity.web.display_non_sticky_footer": { "isLaunched": true },
+          "identity.web.display_icons": { "isLaunched": true },
+          "idv.biometrics_opt_in_force_in": { "isLaunched": false },
+          "idv.biometrics_opt_in": { "isLaunched": false },
+          "nezha_hybrid_google_maps_version_follow_web": {
+            "isLaunched": false
+          },
+          "identity.safari_15_webcam_workaround_kill_switch": {
+            "isLaunched": false
+          },
+          "identity.force_wrong_side_with_face_web": { "isLaunched": false },
+          "identity.force_wrong_side_web": { "isLaunched": false },
+          "identity.force_only_show_wrong_side_web": { "isLaunched": false },
+          "identity.enable_side_detection_web": { "isLaunched": false },
+          "wishlist_sync_mirror_writes_web": { "isLaunched": true },
+          "dls.avatar.monograms_color_enabled": { "isLaunched": false },
+          "only_on_image_quality_upgrade": { "isLaunched": true },
+          "only_on_image_resolution_upgrade_2560": { "isLaunched": false },
+          "only_on_image_resolution_upgrade_1920": { "isLaunched": false },
+          "only_on_image_resolution_upgrade_1680": { "isLaunched": false },
+          "only_on_image_resolution_upgrade_1440": { "isLaunched": true },
+          "pdp_image_gallery_upgrade_web": { "isLaunched": false },
+          "web.monorail.phone_number.countries": { "isLaunched": true },
+          "account_settings_edit_profile_otp_code_length": {
+            "isLaunched": false
+          },
+          "web.account_settings_otp_a11y_updates": { "isLaunched": true },
+          "media_foundation.web.media_upload.video_duration_enforcement": {
+            "isLaunched": true
+          },
+          "user_profile.passport_content_m1_2024": { "isLaunched": true },
+          "m1_upload_profile_photos_auto_zoom_enabled": { "isLaunched": false },
+          "m1_upload_profile_photos_learn_more_enabled": { "isLaunched": true },
+          "m1_upload_profile_photos.sign_up_force_in": { "isLaunched": false },
+          "m1_upload_profile_photos.sign_up_force_out": { "isLaunched": false },
+          "m1_upload_profile_photos.umbrella": { "isLaunched": false },
+          "m1_upload_profile_photos.sign_up": { "isLaunched": true },
+          "m1_upload_profile_photos.booking_photo_force_in": {
+            "isLaunched": false
+          },
+          "m1_upload_profile_photos.booking_photo_force_out": {
+            "isLaunched": false
+          },
+          "m1_upload_profile_photos.booking_photo": { "isLaunched": true },
+          "dls_account_settings_payments_web_force_in": { "isLaunched": false },
+          "dls_account_settings_payments_web": { "isLaunched": true },
+          "dls_account_settings_payouts_web_force_in": { "isLaunched": false },
+          "dls_account_settings_payouts_web": { "isLaunched": true },
+          "dls_compliance_signup_login_web_force_in": { "isLaunched": false },
+          "dls_compliance_signup_login_web": { "isLaunched": false },
+          "p3_defer_modals": { "isLaunched": true },
+          "host_dls.location.google_places_api": { "isLaunched": false },
+          "map.cartographair.logging.enabled": { "isLaunched": true },
+          "p2_p3_tooltip_simplification_force_in": { "isLaunched": false },
+          "china_price_promotion_web_force_in": { "isLaunched": false },
+          "switch_to_v_point": { "isLaunched": true },
+          "china_p2_preload_image_disabled": { "isLaunched": false },
+          "china_p2_preload_image_force_in": { "isLaunched": true },
+          "china_p2_preload_image": { "isLaunched": false },
+          "enable_listing_card_scroll_driven_animation": { "isLaunched": true },
+          "web.prefetch_passport_profile.enabled": { "isLaunched": true },
+          "web.profile_dynamic_prompts": { "isLaunched": false },
+          "m1_release.passport_stamps.launch": { "isLaunched": true },
+          "m13_2024.passport": { "isLaunched": false },
+          "prefetch_disabled": { "isLaunched": false },
+          "enable_prefetch_on_safari": { "isLaunched": true },
+          "messaging.feedback_widget": { "isLaunched": true },
+          "web.identity.losing_idv_status": { "isLaunched": true },
+          "only_on_share_button_enable_preload": { "isLaunched": true },
+          "enable_share_listing_identifier_a11y_label_web": {
+            "isLaunched": true
+          },
+          "checkout_gp_migration_prefetch_web": { "isLaunched": true },
+          "checkout_state_recovery_killswitch": { "isLaunched": false },
+          "checkout_p4_order_id_url_cache_enabled": { "isLaunched": true },
+          "checkout_create_route_wait_for_data_enabled": { "isLaunched": true },
+          "checkout.tools.data_mutation.killswitch": { "isLaunched": false },
+          "web.pdp.availability_calendar.fetch_12_months": {
+            "isLaunched": true
+          },
+          "enable_fuji_discounted_label_style": { "isLaunched": true },
+          "web_stays_pdp_guest_picker_server_driven": { "isLaunched": true },
+          "pdp_experiences_video_posttask_moweb": { "isLaunched": false },
+          "airlite.experiences.disable_video_autoplay": { "isLaunched": true },
+          "disable_remarketing_data_v2": { "isLaunched": false },
+          "web.dragon5_pdp_review_search_relocate": { "isLaunched": false },
+          "web.experiences_pdp.new_review_modal": { "isLaunched": true },
+          "web.host_header.use_grid_layout": { "isLaunched": true },
+          "guidebook.user_profile_dropdown.force": { "isLaunched": false },
+          "web.host_header.z_index_adjust": { "isLaunched": true },
+          "host_notifications_badging.web": { "isLaunched": true },
+          "moweb_app_switch_fab": { "isLaunched": true },
+          "exp.host.messaging.filter_listing.launch": { "isLaunched": true },
+          "enable_map_paint_containment": { "isLaunched": true },
+          "map.log_performance_experimental": { "isLaunched": true },
+          "enable_maps_copyright_containment": { "isLaunched": false },
+          "map.google_maps.tilesloaded.event": { "isLaunched": true },
+          "map_google_static_map_signed_url": { "isLaunched": false },
+          "map.place_icons_missing.event": { "isLaunched": true },
+          "search_for_poi": { "isLaunched": false },
+          "auto_search_map_with_cache_force": { "isLaunched": false },
+          "auto_search_map_without_cache_force": { "isLaunched": false },
+          "search.vector_map.kill_switch": { "isLaunched": false },
+          "map_a11y_labels_desktop": { "isLaunched": false },
+          "map_a11y_labels_moweb": { "isLaunched": false },
+          "map_a11y_2022_moweb": { "isLaunched": true },
+          "map_a11y_2022_desktop": { "isLaunched": true },
+          "map_poi_s2_web_debug_enabled": { "isLaunched": false },
+          "map_web_debug_enabled": { "isLaunched": false },
+          "map_show_map_badge_on_desktop": { "isLaunched": false },
+          "map_web_transit_layer_feature_enabled": { "isLaunched": false },
+          "map_poi_travel_time_desktop": { "isLaunched": false },
+          "map_poi_travel_time_moweb": { "isLaunched": false },
+          "maps.reset_fit_bounds_state_only_if_handler_called": {
+            "isLaunched": false
+          },
+          "map_moweb_large_card_kill_switch": { "isLaunched": false },
+          "luxe_pdp_hide_dateless_contact": { "isLaunched": true },
+          "luxe_pdp_last_divider_fe": { "isLaunched": true },
+          "lux.luxe_pdp.new_inquiry_endpoint": { "isLaunched": true },
+          "lux.enable_pdp_layout_unification": { "isLaunched": true },
+          "elvis_hero_disable_max_height": { "isLaunched": true },
+          "pdp_optical_square_hero": { "isLaunched": false },
+          "web_m3_pdp_new_cohost": { "isLaunched": true },
+          "gx.seo_hide_subtitle_from_linking_section": { "isLaunched": false },
+          "pdp_web_floating_footer_resized_text_update": { "isLaunched": true },
+          "kill-all-intercepts": { "isLaunched": false },
+          "kill-qualtrics-intercepts": { "isLaunched": false },
+          "moweb_ios_safari_photo_modal_memory_optimization": {
+            "isLaunched": true
+          },
+          "cohost_carousel_2025_q1": { "isLaunched": false },
+          "meet_your_host_white_background": { "isLaunched": true },
+          "stays_pdp_show_updated_business_details": { "isLaunched": true },
+          "early_access.new_host_activation_enabled": { "isLaunched": false },
+          "early_access.cohost_activation_enabled": { "isLaunched": false },
+          "mediation.gp.navbar_title.enabled_in_modal": { "isLaunched": false },
+          "moweb_app_install_banner_in_cookie_consent_country": {
+            "isLaunched": false
+          },
+          "moweb_app_install_banner_force_in": { "isLaunched": false },
+          "moweb_app_install_banner_allow_logged_in_users": {
+            "isLaunched": true
+          },
+          "elvis_disable_app_install_banner": { "isLaunched": true },
+          "disable_app_install_banner_homepage": { "isLaunched": false },
+          "moweb_app_install_banner_m1_behavior": { "isLaunched": true },
+          "web.pdp.hide_back_button": { "isLaunched": false },
+          "moweb.pdp.auto_focus_nav": { "isLaunched": true },
+          "web_pdp_show_translation_nux": { "isLaunched": true },
+          "lottie_worker_migration": { "isLaunched": true },
+          "uhe_tpi_embedded_flow": { "isLaunched": false },
+          "uhe.collection.launch": { "isLaunched": false },
+          "payments.gp.use_zero_mutation_for_empty_float_input": {
+            "isLaunched": true
+          },
+          "payments.payouts.soa_tpi_embedded_flow": { "isLaunched": true },
+          "tax.experience.us_kyc.check_referrer_enabled": {
+            "isLaunched": false
+          },
+          "tax.experience.earnings_dashboard.redirect": { "isLaunched": true },
+          "flex_forms.field_state.require_initial_values": {
+            "isLaunched": false
+          },
+          "flex_conditions.not_empty.field_unspecified": { "isLaunched": true },
+          "flex_conditions.string_array_includes.null_field": {
+            "isLaunched": false
+          },
+          "flex_forms.xray_events": { "isLaunched": false },
+          "tax.experience.transition_animation_enabled": {
+            "isLaunched": false
+          },
+          "tax.experience.transition_webkit_enabled": { "isLaunched": false },
+          "china.address_autocomplete_exclude_street": { "isLaunched": true },
+          "china.address_autocomplete_suggest_precise_only": {
+            "isLaunched": true
+          },
+          "tax.experience.form_updates": { "isLaunched": false },
+          "tax.experience.w8eci_recertification_expired_flow_enabled": {
+            "isLaunched": false
+          },
+          "todaytab.n16_layout.force_in": { "isLaunched": false },
+          "todaytab.n16_layout": { "isLaunched": true },
+          "n16_2022_superhost_guide_launch": { "isLaunched": true },
+          "ambassadors_updated_error_screens_web": { "isLaunched": true },
+          "enable_n16_matching_flow_current_location": { "isLaunched": true },
+          "m1_passport": { "isLaunched": true },
+          "upfront_pricing.quick_pay.remove_explantion_data": {
+            "isLaunched": false
+          },
+          "quick_pay.remove_explantion_data": { "isLaunched": false },
+          "quickpay.fetch_bill_polling_fix.web_enabled": {
+            "isLaunched": false
+          },
+          "checkout.stays.quickpay_logs.only_log_with_CC.killswitch": {
+            "isLaunched": false
+          },
+          "checkout.stays.quickpay_logs.allow_duplicates_without_CC.killswitch": {
+            "isLaunched": false
+          },
+          "pgng.adyen.upi_qr_traffic.enable": { "isLaunched": false },
+          "test_adyen_cvv_only_validation_fix": { "isLaunched": false },
+          "quickpay.checkout_tokens.refetch": { "isLaunched": true },
+          "a4w_3pb_improvement_airbnb_org": { "isLaunched": true },
+          "desktop_p4_to_p5_fade_killswitch": { "isLaunched": false },
+          "m1_co_travelers": { "isLaunched": true },
+          "force_in_gtag_partytown": { "isLaunched": false },
+          "pageshell_dynamic_height": { "isLaunched": true },
+          "web_default_rem_theme": { "isLaunched": true },
+          "deliver.sndi.with.access.forward_cookies": { "isLaunched": true },
+          "hodor_domain_switch_send.use_blob": { "isLaunched": false },
+          "gx_gifting_enable_giftcards_parallax": { "isLaunched": true },
+          "host_dls_google_static_map_signed_url": { "isLaunched": true },
+          "mys.photo_edit_modal.remove_cancel_button": { "isLaunched": true },
+          "payments.mpl.pay_early_disabled_explanation": {
+            "isLaunched": false
+          },
+          "payments.mpl.pay_early_disabled_explanation.force_in": {
+            "isLaunched": false
+          },
+          "gift_cards.payment_options_modal.force_in": { "isLaunched": false },
+          "gift_cards.new_post_claim_flow": { "isLaunched": true },
+          "gift_cards.claim_page_login_modal.force_in": { "isLaunched": false },
+          "aircover_for_guests_lottie_based_ttfmp": { "isLaunched": true },
+          "disable_structured_clone": { "isLaunched": true },
+          "checkout.messaging_risk_check_migration.enabled": {
+            "isLaunched": false
+          },
+          "enable_main_split_content_containment": { "isLaunched": true },
+          "china_dragon5_tos_enable": { "isLaunched": false },
+          "china_tos_update_consent_web": { "isLaunched": true },
+          "incognia_web_device_fingerprinting_enabled": { "isLaunched": false },
+          "gti_segmented_design_rule_based_testing": { "isLaunched": true },
+          "remove_dob_on_signups_force": { "isLaunched": false },
+          "remove_dob_on_signups": { "isLaunched": true },
+          "enable_suggested_login_force": { "isLaunched": false },
+          "p4_bingo_button_updates_desktop": { "isLaunched": true },
+          "web.m1.fix_names_force_in": { "isLaunched": false },
+          "web.m1.fix_names_enabled": { "isLaunched": true },
+          "oauth_popup": { "isLaunched": true },
+          "web.signup_sanitize_all_redirect_url_post_auth": {
+            "isLaunched": true
+          },
+          "fingerprintjs_web_device_fingerprinting_enabled": {
+            "isLaunched": false
+          },
+          "remarketing_jitney_logging": { "isLaunched": true },
+          "disable_view_transition_navigation": { "isLaunched": false },
+          "booking.pdp.n16_guest_standards.signup.launch": {
+            "isLaunched": false
+          },
+          "web.signup_login_enable_admin_menu": { "isLaunched": false },
+          "booking_auth_moweb_signup_to_book_title_force": {
+            "isLaunched": false
+          },
+          "social_signup_skip_unmounted": { "isLaunched": true },
+          "web_trust_sections_updated_profile_photo": { "isLaunched": false },
+          "holiday_2023_gifting_landing_updates": { "isLaunched": false },
+          "aircover_lp_redirect_to_hc_article": { "isLaunched": true },
+          "gt.content_platform.article_access": { "isLaunched": true },
+          "contact_host_sections_preload_query_v4_force_in": {
+            "isLaunched": false
+          },
+          "contact_host_sections_preload_query_v4": { "isLaunched": false },
+          "m1_china_brand_update": { "isLaunched": true },
+          "deprecate_search_blocks_pdp": { "isLaunched": false },
+          "is_icons_category_first_web": { "isLaunched": false },
+          "gx_stays_disable_deferred_sections_request_on_error": {
+            "isLaunched": true
+          },
+          "force_pdp_failure_for_cypress": { "isLaunched": false },
+          "china_guest_platform_moweb_v2": { "isLaunched": true },
+          "seo_metadata_skip_deferred": { "isLaunched": true },
+          "affiliates_p3_to_p2_redirect_demo": { "isLaunched": true },
+          "affiliates_p3_to_p2_redirect_hometogo": { "isLaunched": false },
+          "affiliates_p3_to_p2_redirect_trivago": { "isLaunched": true },
+          "ssr_pdp_impression_id": { "isLaunched": true },
+          "erf-gx.acp_id_enabled": { "isLaunched": false },
+          "gx.acp_id_enabled": { "isLaunched": true },
+          "kill_ssr_interactivity_enhancements": { "isLaunched": false },
+          "enable_p2_hidden_controls": { "isLaunched": false },
+          "experiences_guest_place_pdp_experience_link": { "isLaunched": true },
+          "place_pdp_remove_third_party_components": { "isLaunched": true },
+          "a4p_host_associates": { "isLaunched": false },
+          "exp_p5_5_redirect_to_t1": { "isLaunched": true },
+          "exp_p5_5_redirect_to_t1_force_in": { "isLaunched": false },
+          "exp_p5_5_hide_first_section_header": { "isLaunched": false },
+          "exp_p5_5_oe_upsell": { "isLaunched": true },
+          "exp_p5_5_oe_upsell_force": { "isLaunched": false },
+          "hyperloop.trust_home_safety_migration": { "isLaunched": true },
+          "trust_landing_redirect_web": { "isLaunched": true },
+          "home_safety_redirect_web": { "isLaunched": true },
+          "p2b_form_intake_fe_launched": { "isLaunched": true },
+          "hostinbox.update_inbox_filters_o16": { "isLaunched": true },
+          "messaging_web_composebar_v2": { "isLaunched": false },
+          "messaging_thread_footer_slot_web": { "isLaunched": false },
+          "messaging.enable_threaded_replies_web": { "isLaunched": false },
+          "web_message_thread_under_composebar_force_show": {
+            "isLaunched": false
+          },
+          "summer_2024_messaging_nux_is_user_active_host": {
+            "isLaunched": false
+          },
+          "web.mum.user_profile_photo_upload": { "isLaunched": false },
+          "m1_passport_profile_reordering_force_in": { "isLaunched": false },
+          "m1_passport_profile_reordering_force_out": { "isLaunched": false },
+          "m1_upload_profile_photos.edit_profile_force_in": {
+            "isLaunched": false
+          },
+          "m1_upload_profile_photos.edit_profile_force_out": {
+            "isLaunched": false
+          },
+          "m1_upload_profile_photos.edit_profile": { "isLaunched": true },
+          "m3.userprofile.web": { "isLaunched": true },
+          "web_message_templates_milestone_1": { "isLaunched": false },
+          "messaging.messaging_settings_try_quick_replies_tooltip.force_show": {
+            "isLaunched": false
+          },
+          "messaging.messaging_settings_quick_replies_update.force_show": {
+            "isLaunched": false
+          },
+          "messaging_platform.viaduct_migration.new_pagination_web": {
+            "isLaunched": false
+          },
+          "messaging_platform_viaduct_migration.nova_pagination_enabled": {
+            "isLaunched": true
+          },
+          "messaging_m1_inbox_not_mark_read": { "isLaunched": false },
+          "read_receipts.enable_sync_protocol_subscription_web": {
+            "isLaunched": false
+          },
+          "messaging_platform.viaduct_migration.inbox_web": {
+            "isLaunched": false
+          },
+          "messaging_platform.inbox_web.only_one_preview_message": {
+            "isLaunched": true
+          },
+          "messaging.enable_delete_message": { "isLaunched": true },
+          "messaging.enable_edit_message": { "isLaunched": true },
+          "summer_2024_messaging_launch_web_nova": { "isLaunched": false },
+          "summer_2024_messaging_launch_web_nova_inbox": {
+            "isLaunched": false
+          },
+          "messaging_web_always_hide_support_details": { "isLaunched": false },
+          "o16_chm_global": { "isLaunched": true },
+          "cohost_marketplace_enabled": { "isLaunched": true },
+          "cohost_marketplace_web_invitation_flow_enabled": {
+            "isLaunched": true
+          },
+          "communications.sbui_details.official_threads": {
+            "isLaunched": false
+          },
+          "lux.disable_pdp_trip_design_service": { "isLaunched": true },
+          "niobe_web_operation_registry_disabled": { "isLaunched": false },
+          "enable_apollo_provider_proxy_logging": { "isLaunched": false },
+          "guest_reservation_detail.web.masked_phone_number_v2": {
+            "isLaunched": true
+          },
+          "cancellations_web_launch_2024_rdp_redirect": { "isLaunched": true },
+          "hawaii.updated_rtb_withdraw_flow": { "isLaunched": false },
+          "mediation.n16.mf_fix": { "isLaunched": true },
+          "mediation.action.force_cactch_mutation_error.enable": {
+            "isLaunched": true
+          },
+          "mediation.action.force_refresh_on_close.enable": {
+            "isLaunched": false
+          },
+          "uic_navgate_to_url_migrate": { "isLaunched": false },
+          "mediation.error_refetch.disable": { "isLaunched": false },
+          "csp.mediation.pay_with_mutation.web": { "isLaunched": true },
+          "itinerary_multiple_guest_name_inputs_web": { "isLaunched": false },
+          "rdp_facepile_tooltip_disable_cache": { "isLaunched": false },
+          "airkey_hrd_edit_cico_modal": { "isLaunched": true },
+          "airkey_hrd_edit_cico_modal_force_in": { "isLaunched": false },
+          "cancellation.rtb_graduation_hrd_modal.force_in": {
+            "isLaunched": false
+          },
+          "host_reservation_details.web.masked_phone_number": {
+            "isLaunched": true
+          },
+          "allowlist_to_create_zero_dollar_listings": { "isLaunched": false },
+          "seamless_entry_backup_entry_v2": { "isLaunched": true },
+          "seamless_entry_cico_v2": { "isLaunched": true },
+          "airkey_setup_flow_fixes": { "isLaunched": true },
+          "airkey_setup_flow_consent_update": { "isLaunched": true },
+          "messaging_prototypes.suggested_replies": { "isLaunched": false },
+          "messaging_prototypes.suggested_replies_demo": {
+            "isLaunched": false
+          },
+          "experiences_hrd": { "isLaunched": false },
+          "experiences.host_calendar.remove_boundary_days": {
+            "isLaunched": true
+          },
+          "enable_n16_details_panel_web": { "isLaunched": true },
+          "ambassador.host_inbox": { "isLaunched": true },
+          "beespecimen.use_cohosting_indexer_response": { "isLaunched": false },
+          "messaging_location_sending_search_web_force_in": {
+            "isLaunched": false
+          },
+          "messaging_location_sending_search_web": { "isLaunched": true },
+          "messaging-web-video-messages": { "isLaunched": false },
+          "wedding_cake_web_shiota_report_fetch_newer": { "isLaunched": false },
+          "wedding_cake_web_shiota_report_send_item": { "isLaunched": false },
+          "wedding_cake_web_shiota_report_newer_items": { "isLaunched": false },
+          "wedding_cake_web_shiota_report_polling": { "isLaunched": true },
+          "wedding_cake_web_shiota_report_mark_thread_read": {
+            "isLaunched": false
+          },
+          "wedding_cake_web_shiota_report_fetch_older_items": {
+            "isLaunched": false
+          },
+          "wedding_cake_web_shiota_report_fetch_item": { "isLaunched": false },
+          "wedding_cake_web_shiota_report_create_websocket": {
+            "isLaunched": false
+          },
+          "wedding_cake_web_shiota_report_reactions": { "isLaunched": false },
+          "messaging.killswitch.error.permission_denied": {
+            "isLaunched": false
+          },
+          "messaging_platform_viaduct_migration_new_sync_graphql_enforce_polling_web": {
+            "isLaunched": false
+          },
+          "csp.ava_shimmer_event_check.web": { "isLaunched": true },
+          "messaging_dependency_tracing": { "isLaunched": false },
+          "cotraveler_join_nux_disable_cache": { "isLaunched": false },
+          "exp_checkout_redirect": { "isLaunched": true },
+          "web.pdp.experiences_new": { "isLaunched": false },
+          "experiences_new_stack": { "isLaunched": false },
+          "wishlist_m1_nux_fast-follows_web.enable": { "isLaunched": true },
+          "wishlist_m1_collaborative_nux_logged_out_collaborator_kill_switch": {
+            "isLaunched": false
+          },
+          "gs.plan.show_unavailable_stays_pins.force_treatment": {
+            "isLaunched": false
+          },
+          "gs.plan.show_unavailable_stays_pins": { "isLaunched": true },
+          "gs.plan.show_add_to_map.force_treatment": { "isLaunched": false },
+          "gs.plan.show_add_to_map": { "isLaunched": true },
+          "search-web.listing-card.only-on-animation.killswitch": {
+            "isLaunched": false
+          },
+          "recently_viewed_refetch_on_mount": { "isLaunched": true },
+          "summer_2024_messaging_p0_nux": { "isLaunched": false },
+          "summer_2024_messaging_p1_nux": { "isLaunched": false },
+          "summer_2024_messaging_p0_nux_skip_impression_capping_test": {
+            "isLaunched": false
+          },
+          "summer_2024_messaging_nux_enable_force_discard": {
+            "isLaunched": false
+          },
+          "meassaging.legal_disclosure_launch": { "isLaunched": true },
+          "messaging.thread_scanning_disclosure.cs.force_show": {
+            "isLaunched": false
+          },
+          "messaging.thread_scanning_disclosure.default.force_show": {
+            "isLaunched": false
+          },
+          "use_visual_viewport_offset": { "isLaunched": true },
+          "messaging-everywhere-demo-enabled": { "isLaunched": false },
+          "cookies_banner_force_in": { "isLaunched": false },
+          "allow_tuv_german_cookie_preferences_copy_force_in": {
+            "isLaunched": false
+          },
+          "allow_tuv_german_cookie_preferences_copy": { "isLaunched": false },
+          "trust.privacy.cookie_banner.bright_pattern_treatment_1_force_in": {
+            "isLaunched": false
+          },
+          "trust.privacy.use_reject_all_backend_value": { "isLaunched": false },
+          "trust.privacy.cookie_banner.enable_bright_pattern": {
+            "isLaunched": false
+          },
+          "show_referral_in_header_dropdown": { "isLaunched": true },
+          "header_flyout_menu_wmpw": { "isLaunched": true },
+          "experiences_host_acquisition_improved_header_cta_v2": {
+            "isLaunched": true
+          },
+          "set_password_use_get_in_monorail": { "isLaunched": false },
+          "force_monorail_validate_reset_password_web": { "isLaunched": false },
+          "mpl.conditionally_ignore_process_after_tender_change": {
+            "isLaunched": true
+          },
+          "mpl.use_argo_as_a_currency_source": { "isLaunched": true },
+          "m1_co_travelers.invitation_preview_launch_kill_switch": {
+            "isLaunched": false
+          },
+          "web.preferred_name_regex_update": { "isLaunched": true },
+          "personal_info.government_id_rename": { "isLaunched": false },
+          "personal_info.display_provided_government_id_field": {
+            "isLaunched": false
+          },
+          "account_settings_usage_type_field.forcein": { "isLaunched": false },
+          "visibility.launch_force_in": { "isLaunched": false },
+          "n16_2022_visibility_account_settings_launch": { "isLaunched": true },
+          "web.beta_program.guest_profile_entry_opt_in.enabled": {
+            "isLaunched": false
+          },
+          "guest_referral_entry_point_web": { "isLaunched": true },
+          "web.account_account_settings.enable_hlp_entrypoint": {
+            "isLaunched": true
+          },
+          "beta_program.guest_profile_entry.enabled": { "isLaunched": false },
+          "web_how_it_works_enable": { "isLaunched": true },
+          "m3_csp_safeguard_guest_profile": { "isLaunched": true },
+          "hog_pwa_login_force_disable_wmpw": { "isLaunched": true },
+          "pwa_test_trebuchet": { "isLaunched": false },
+          "gift_cards_header_menu_item": { "isLaunched": true },
+          "api_web_client_migration.fejax.account_settings.kill_switch": {
+            "isLaunched": true
+          },
+          "viaduct.notification_preferences.deprecate_web_push": {
+            "isLaunched": false
+          },
+          "kill_web_push_notifications": { "isLaunched": false },
+          "moweb_push_notifications": { "isLaunched": true },
+          "desktop_push_notifications": { "isLaunched": true },
+          "web_tcpa_compliance_treb.force_in": { "isLaunched": false },
+          "web_tcpa_compliance_treb": { "isLaunched": true },
+          "trust_defenense_coworker_friction_treb.force_in": {
+            "isLaunched": true
+          },
+          "trust_defenense_coworker_friction_treb": { "isLaunched": false },
+          "account_settings.facebook_connect_deprecation.force_in": {
+            "isLaunched": false
+          },
+          "trust.totp_friction_employee_web_launch.force_in": {
+            "isLaunched": false
+          },
+          "trust.totp_friction_employee_web_launch": { "isLaunched": true },
+          "enable_ap_output_format_json": { "isLaunched": true },
+          "enable_ap_output_format_html": { "isLaunched": true },
+          "dsr_feedback_widget_after_download.enabled": { "isLaunched": true },
+          "dsr_feedback_widget.enabled": { "isLaunched": true },
+          "cookies_settings_force_in": { "isLaunched": false },
+          "ptools.deprecate_email_alias_at_2023_09_30": { "isLaunched": true },
+          "dragon5_coupon_center.force_in": { "isLaunched": false },
+          "payments.guest_wallet_soa.coupons": { "isLaunched": false },
+          "web.gift_cards.claim_design_updates": { "isLaunched": true },
+          "payments.cog_deletion": { "isLaunched": true },
+          "nova.become_user.add_pay_button": { "isLaunched": false },
+          "airbnb_org.host_recurring_donations.flow_revamp.client": {
+            "isLaunched": true
+          },
+          "payments.payouts.preference_page_soa_force_out": {
+            "isLaunched": false
+          },
+          "payments.payouts.preference_page_soa": { "isLaunched": true },
+          "payments.payouts.preference_page_soa_force_in": {
+            "isLaunched": false
+          },
+          "payments.payouts.instruments_update_soa": { "isLaunched": true },
+          "payments.payouts.enable_payout_methods_updated_sort_order": {
+            "isLaunched": true
+          },
+          "payments.payouts.china.sdui_force_in": { "isLaunched": true },
+          "web.payouts_tax_info_required_modal": { "isLaunched": false },
+          "web.payouts_tax_info_required_modal_is_dismissable": {
+            "isLaunched": false
+          },
+          "web.calendar_tax_info_required_modal": { "isLaunched": false },
+          "payments.vacuba.display_vacuba_payout_deprecation_error": {
+            "isLaunched": false
+          },
+          "payments.payouts.block_add_payout_method_for_vcc_default_instrument": {
+            "isLaunched": true
+          },
+          "payments.payouts.sdui_modal_aware_layout": { "isLaunched": false },
+          "web.payment.earnings.fast_pay_banner_enabled": {
+            "isLaunched": true
+          },
+          "tax.experience.italy_wth_data_collection_enabled": {
+            "isLaunched": false
+          },
+          "tax.experience.mobile_back_arrow_enabled": { "isLaunched": true },
+          "tax.experience.form_entrypoints_reconfig": { "isLaunched": false },
+          "tax.experience.walle_migration": { "isLaunched": false },
+          "tax.experience.italy_wth.disable_2022_reminder_modal": {
+            "isLaunched": true
+          },
+          "tax.experience.norway.disable.walle": { "isLaunched": true },
+          "tax.experience.open_pdf_in_browser": { "isLaunched": false },
+          "tax.experience.italy_wth.phase3.global_tin_collection": {
+            "isLaunched": true
+          },
+          "tax.experience.w8eci_recertification_flows_enabled": {
+            "isLaunched": false
+          },
+          "hosting_services.core_guest_entry_point": { "isLaunched": false },
+          "hosting_inbox_hyperloop_migration": { "isLaunched": false },
+          "use_new_calendar_router": { "isLaunched": true },
+          "hog_add_listing_global_header": { "isLaunched": true },
+          "hog_direct_hosting_entrypoints": { "isLaunched": true },
+          "enable_account_settings_luxury": { "isLaunched": false },
+          "trust.be.coworker_aov.is_enabled": { "isLaunched": true },
+          "search.education_announcement_enabled.web": { "isLaunched": true },
+          "online_experiences_tab_removal.enable": { "isLaunched": true },
+          "search.scroll-restoration": { "isLaunched": false },
+          "search-input.autocomplete-ios-aria-live.killswitch": {
+            "isLaunched": false
+          },
+          "atomic_calendar_announce_selection": { "isLaunched": false },
+          "upfront_pricing_2022_toggle_remove_url_param": {
+            "isLaunched": false
+          },
+          "api_web_client_migration.fejax.pricing_guest.kill_switch": {
+            "isLaunched": true
+          },
+          "pricing_upfront_pricing_2022_toggle_killswitch": {
+            "isLaunched": false
+          },
+          "listing_card_migration_sxs_web_fields_erf1": { "isLaunched": true },
+          "listing_card_migration_sxs_web_fields_erf2": { "isLaunched": true },
+          "listing_card_migration_sxs_web_fields_erf3": { "isLaunched": true },
+          "listing_card_migration_sxs_web_fields_erf4": { "isLaunched": true },
+          "search.suggestions_announcement_enabled_force_show.web": {
+            "isLaunched": false
+          },
+          "wishlists_portal_save_toast": { "isLaunched": false },
+          "search.room_type_prefetch.web.killswitch": { "isLaunched": true },
+          "search.room_type_prefetch_original.web.killswitch": {
+            "isLaunched": true
+          },
+          "selected_filters_2024_force_web": { "isLaunched": false },
+          "stays_pdp_disable_prefetch_force": { "isLaunched": false },
+          "disable_marketing_event_tracking.search_listings": {
+            "isLaunched": false
+          },
+          "web_map_dismiss_selection_on_filter_change": { "isLaunched": true },
+          "web_static_map_shimmer_killswitch": { "isLaunched": false },
+          "m13_search_bar_phase1_force_moweb": { "isLaunched": false },
+          "m13_search_bar_phase1_force_a_moweb": { "isLaunched": false },
+          "m13_search_bar_phase1_force_b_moweb": { "isLaunched": false },
+          "explore_image_preload_enable": { "isLaunched": true },
+          "guidebook.enable_advice_feedback": { "isLaunched": true },
+          "trip_ugc_translate_guidebook": { "isLaunched": false },
+          "trip_ugc_translate_guidebook_erf": { "isLaunched": false },
+          "web.user_flags.enable_guidebooks_entry": { "isLaunched": false },
+          "remove_cbkp_from_homepage_caching": { "isLaunched": false },
+          "gx.seo.homepage_metadata_march_2024": { "isLaunched": true },
+          "m1_web_cookie_banner_coordination_disabled": { "isLaunched": false },
+          "enable_app_install_banner_on_homepage": { "isLaunched": true },
+          "web_slim_tabbar_visibility": { "isLaunched": true },
+          "disable_web_map_cover": { "isLaunched": true },
+          "disable_useHomepageScrollRestoration": { "isLaunched": false },
+          "web.mls.enable_modal_nav": { "isLaunched": true },
+          "storefronts_mls_adapt_earhart_label": { "isLaunched": false },
+          "storefronts_myms_high_quality_video": { "isLaunched": false },
+          "storefronts_myms_low_quality_video": { "isLaunched": false },
+          "experiences_filter_bar.force_hide": { "isLaunched": false },
+          "web.passport_onboarding_animated_icons": { "isLaunched": true },
+          "passport_onboarding.profile_preview_edit_link": {
+            "isLaunched": false
+          },
+          "user_profile.passport_onboarding_m1_2024": { "isLaunched": true },
+          "m13_new_trips_tab": { "isLaunched": false },
+          "require_country_for_pwa": { "isLaunched": false },
+          "installed-pwa_enabled": { "isLaunched": false },
+          "installed-pwa_launched": { "isLaunched": false },
+          "client_routing_wrapper_document_handle_link_press": {
+            "isLaunched": false
+          },
+          "sw_disable_niobe_cache": { "isLaunched": false },
+          "sw_pwa_disable_niobe_cache": { "isLaunched": false },
+          "sw_allow_shell_on_search_verticals": { "isLaunched": false },
+          "disable_all_service_workers": { "isLaunched": false },
+          "temporarily_disable_service_workers_for_me": { "isLaunched": false },
+          "disable_app_shell_enabled": { "isLaunched": false },
+          "disable_app_shell_launched": { "isLaunched": false },
+          "gx_plan_trips_offline": { "isLaunched": false },
+          "gx_plan_trips_offline_force": { "isLaunched": false },
+          "desktop_service_workers_dynamic_precaching": { "isLaunched": true },
+          "pwa_service_workers_dynamic_precaching": { "isLaunched": false },
+          "kill_desktop_service_workers_v4": { "isLaunched": false },
+          "enable_navbar_visible_at_thresholds": { "isLaunched": true },
+          "short_circuit_app_banner_query_force": { "isLaunched": false },
+          "short_circuit_app_banner_query_launch": { "isLaunched": true },
+          "erf_partytown_gtm_enabled": { "isLaunched": false },
+          "disable_thirdparty_js_countries": { "isLaunched": false },
+          "deliver_user_consent_gpc": { "isLaunched": true },
+          "core_foundation.web.bug_reporter": { "isLaunched": false },
+          "core_foundation.web.bug_reporter.submission_kill_switch": {
+            "isLaunched": true
+          },
+          "accessibility_guardrail_metrics_web": { "isLaunched": true },
+          "payins.soa_currency.hyperloop_shared": { "isLaunched": true },
+          "web_jitney_compression": { "isLaunched": true },
+          "force_limit_media_web_image_metrics_2024": { "isLaunched": false },
+          "force_in_loop_media_web_image_metrics_2024": { "isLaunched": false },
+          "force_out_loop_media_web_image_metrics_2024": {
+            "isLaunched": false
+          },
+          "cookies_scanner_enabled": { "isLaunched": false },
+          "enable_client_storage_metrics": { "isLaunched": false },
+          "enable_tracker_changes_logging": { "isLaunched": false },
+          "clean_up_targeting_cookie": { "isLaunched": true },
+          "kill_partytown_service_workers": { "isLaunched": false },
+          "membership.resize_captcha": { "isLaunched": true },
+          "china_single_captcha_force_in": { "isLaunched": false },
+          "china_geetest_captcha_bind_style": { "isLaunched": true },
+          "test_adyen_three_d_secure_full_page_redirect_rule": {
+            "isLaunched": false
+          },
+          "quick_pay.log_airlock_request_replay.enable": { "isLaunched": true },
+          "china_trust_defense.airlock_miniapps": { "isLaunched": true },
+          "trust.kraken.test.stepstones.token.propagation": {
+            "isLaunched": false
+          },
+          "should_switch_recaptcha_domain": { "isLaunched": true },
+          "google_recaptcha_v3_web_contact_us": { "isLaunched": false },
+          "web.enable_otp_input_for_aov": { "isLaunched": false },
+          "fin_fraud.migrate_micro_auth_payload": { "isLaunched": false },
+          "risk.micro_auth_hard_block": { "isLaunched": true },
+          "trust_contact_host_dls19_web": { "isLaunched": false },
+          "erf-trust_contact_host_dls19_web_enable": { "isLaunched": false },
+          "airlock.payment_authentication.auto_close_modal": {
+            "isLaunched": true
+          },
+          "china_trust_defense.captcha_miniapps": { "isLaunched": true },
+          "payments.cvv_verification.single_input.enable": {
+            "isLaunched": true
+          },
+          "confirm_and_pay_loader_v2_connect_to_bank_screen_disable": {
+            "isLaunched": false
+          },
+          "pineapple.pgng.adyen.india.card.payin.ramp": { "isLaunched": true },
+          "pineapple.redirect.pgng.adyen.india.card.payin.ramp": {
+            "isLaunched": false
+          },
+          "payments.sca.payin.enable_collect_device_data": {
+            "isLaunched": false
+          },
+          "payments.sca.payin.force_single_step_challenge": {
+            "isLaunched": false
+          },
+          "trust.host_sca.enable_6_digit_input": { "isLaunched": false },
+          "payments.sca.custom_get_help_for_host_sca": { "isLaunched": true },
+          "payments.sca.force_password_alternative_to_pin": {
+            "isLaunched": false
+          },
+          "payments.sca.password_alternative_to_pin": { "isLaunched": false },
+          "finfraud.plaid_sandbox_environment": { "isLaunched": false },
+          "payments_risk_plaid_friction_legal_content_enable": {
+            "isLaunched": true
+          },
+          "payments_risk_plaid_ui_logging_enable": { "isLaunched": true },
+          "web.appeals.remediation_window_host": { "isLaunched": true },
+          "disable_is_host_post_to_gtm": { "isLaunched": false },
+          "disable_remartketing_data": { "isLaunched": false },
+          "disable_marketing_event_tracking.page_view": { "isLaunched": false },
+          "a4w.sso.m1.a4w5559": { "isLaunched": true },
+          "enable_css_has_selector_polyfill": { "isLaunched": false },
+          "show_facebook_prompt_force": { "isLaunched": false },
+          "legacy_browser_roadblock_rollout": { "isLaunched": true }
+        },
+        "willServerRequestBeCDNCached": false
+      }
+    ],
+    [
+      "EnvToken",
+      {
+        "ENV_ROLE": "core-guest-loop-production",
+        "LOOP_NAME": "core-guest-loop",
+        "IS_DEV": false,
+        "IS_TEST_KUBE_ENV": false,
+        "IS_NEXT": false,
+        "IS_PROD": true,
+        "IS_STAGING": false,
+        "IS_ONETOUCH_PROD": true,
+        "ATOMIC_CSS": "true"
+      }
+    ],
+    [
+      "StandardTrackingContextToken",
+      {
+        "source": "hyperloop",
+        "platform": "wide-web",
+        "app_full_version": "f7652f96e4d22e86519bf0048508dfb19062203f",
+        "version": "sha=f7652f96e4d2",
+        "controller": "core-guest-loop",
+        "app": "core-guest-spa",
+        "action": "/rooms/33020750",
+        "req_uuid": "b2fbd62c-11d9-447f-b6b7-8dc16f94418e",
+        "shardset": "a0",
+        "canonical_host": "www.airbnb.com.br",
+        "canonical_url": "/rooms/33020750",
+        "environment": "production"
+      }
+    ],
+    ["AatCookieNameToken", "_aat"],
+    ["UserAttrCookieNameToken", "_user_attributes"],
+    [
+      "I18nInitDataToken",
+      {
+        "locale": "pt",
+        "base_direction": "ltr",
+        "language": "pt",
+        "moment_locale": "pt-br",
+        "country": "BR",
+        "tld_country": "BR",
+        "current_locale_name": "Português (BR)"
+      }
+    ],
+    ["ProjectNameToken", "core-guest-spa"],
+    [
+      "ClientHintsToken",
+      {
+        "deviceMemory": 8,
+        "devicePixelRatio": 1,
+        "effectiveConnectionType": "4g",
+        "userAgent": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+        "userAgentPlatform": "\"Linux\"",
+        "userAgentPlatformVersion": "\"6.8.12\"",
+        "prefersMobileExperience": false,
+        "viewportWidth": 545
+      }
+    ],
+    ["FormFactorToken", "wide"],
+    ["LocaleToken", "pt"],
+    ["AppNameToken", "core-guest-spa"]
+  ],
+  "root": [
+    ["RouteConfigNameToken", "default"],
+    ["UserDataToken", {}],
+    ["CustomProjectNameToken", "pdp-platform"],
+    ["InitialCurrentBreakpointToken", null],
+    ["DirectionToken", "ltr"],
+    ["DeprecatedFormFactorToken", "desktop"],
+    ["FormFactorToken", "wide"],
+    ["ThemeIdToken", 1],
+    ["ColorSchemeToken", null]
+  ],
+  "root > core-guest-spa": [
+    [
+      "BootstrapData{_compat_}Token",
+      {
+        "layout-init": {
+          "canonical_host": "www.airbnb.com.br",
+          "language": "pt",
+          "locale": "pt",
+          "api_config": {
+            "key": "d306zoyjsyarp7ifhu67rjxn52tv0t20",
+            "baseUrl": "/api"
+          },
+          "deep_link": null,
+          "tracking_context": {
+            "source": "hyperloop",
+            "platform": "wide-web",
+            "app_full_version": "f7652f96e4d22e86519bf0048508dfb19062203f",
+            "version": "sha=f7652f96e4d2",
+            "controller": "core-guest-loop",
+            "app": "pdp-platform",
+            "action": "/rooms/33020750",
+            "req_uuid": "b2fbd62c-11d9-447f-b6b7-8dc16f94418e",
+            "shardset": "a0",
+            "canonical_host": "www.airbnb.com.br",
+            "canonical_url": "/rooms/33020750",
+            "environment": "production"
+          },
+          "no_flash_alerts": null,
+          "google_maps_url": "https://maps.googleapis.com/maps/api/js?language=pt&region=BR&v=3.36&libraries=places&client=gme-airbnbinc&channel=hyperloop-prod&key=AIzaSyAytC_TusuhG7kpNQ19hMrCzXDIUjd307o",
+          "airbnb_open_street_map_js_url": "https://a0.muscache.com/airbnb/static/client/packages/mapbox.bundle-91a41bde.js",
+          "airbnb_open_street_map_css_url": "https://a0.muscache.com/airbnb/static/mapbox/mapbox-53258f8275602ce5f26e5d8e17ead78d.css",
+          "airbnb_onetrust_css_url": "https://a0.muscache.com/airbnb/static/onetrust/optanon-7a56b7e93cad38952977a255797cb655.css",
+          "gaode_map_url": "https://webapi.amap.com/maps?v=1.3&key=d2606fa287ca45eeaabf5658aa5ced38",
+          "gaode_map_css_url": "https://a0.muscache.com/airbnb/static/gaode/gaode-37a881645966dc37fbceb91bdda33c89.css",
+          "d3_js_url": "https://a0.muscache.com/airbnb/static/vendor/d3.v3.5.17.min.js",
+          "sift_key": "3d72676b30",
+          "pellet_id": "kfgn8s24",
+          "appVersionFull": "f7652f96e4d22e86519bf0048508dfb19062203f"
+        },
+        "user-attr-cookies": {
+          "flags": {
+            "name": "flags",
+            "value": {
+              "this_bit_is_available": 2,
+              "can_see_community_links": 4,
+              "has_new_notifications": 8,
+              "og_publish": 16,
+              "is_business_travel_verified": 32,
+              "update_cached": 64,
+              "revert_to_admin": 128,
+              "facebook_connected": 256,
+              "erf_trebuchet_log": 512,
+              "has_search": 1024,
+              "has_dates": 4096,
+              "has_acpt_resv_as_gst": 8192,
+              "can_send_profile_messages": 32768,
+              "just_logged_in": 65536,
+              "has_been_host": 131072,
+              "should_drop_pellet": 262144,
+              "field_guide_preload": 524288,
+              "is_active_host": 1048576,
+              "is_business_travel_manager": 2097152,
+              "debugging_mode": 4194304,
+              "is_host_referral_nav_bar_link_enabled": 8388608,
+              "is_photo_ops": 16777216,
+              "is_photographer": 33554432,
+              "is_vr_platform_powered_host": 67108864,
+              "can_see_meetups": 134217728,
+              "should_drop_sift_pellet": 268435456,
+              "has_host_navigation_header": 536870912,
+              "is_booker_dashboard_launched": 1073741824
+            }
+          },
+          "roles": {
+            "name": "roles",
+            "value": {
+              "is_content_manager": 1048576,
+              "is_stats_admin": 16777216
+            }
+          },
+          "user_attributes": { "name": "_user_attributes" }
+        },
+        "facebook-init": {
+          "enabled": true,
+          "appId": "138566025676",
+          "scope": "email,public_profile",
+          "sdkUrl": "https://connect.facebook.net/pt_BR/sdk.js"
+        },
+        "map_provider": "google",
+        "initialPageCDNCached": false,
+        "IS_DEV": false,
+        "HYPERLOOP_ENV": "core-guest-loop-production",
+        "IS_ADMIN": false,
+        "trebuchetContext": {
+          "tld_country": "BR",
+          "hostname": "www.airbnb.com.br",
+          "visitorID": "1733494442_EANmYzMDliNmRjN2",
+          "visitorIdCRC": 1104459957,
+          "locale": "pt",
+          "visitorCountry": "BR",
+          "language": "pt"
+        },
+        "cdn_experiments": {},
+        "botDetectionEndpoints": [
+          {
+            "endpoint": "/api/v2/phone_one_time_passwords",
+            "actionName": "phone_otp/signup_login/web",
+            "methods": ["POST"]
+          },
+          {
+            "endpoint": "/api/v2/auth_flows",
+            "actionName": "unified_email_lookup/signup_login/web",
+            "methods": ["POST"]
+          },
+          {
+            "endpoint": "/create",
+            "actionName": "create/s_l/web_platform",
+            "methods": ["POST"]
+          },
+          {
+            "endpoint": "/authenticate",
+            "actionName": "authenticate/s_l/web_platform",
+            "methods": ["POST"]
+          },
+          {
+            "endpoint": "/api/v2/login_for_web",
+            "actionName": "v2/login_for_web/s_l/web_platform",
+            "methods": ["POST"]
+          },
+          {
+            "endpoint": "/forgot_password_api",
+            "actionName": "forgot_passwords/web",
+            "methods": ["POST"]
+          },
+          {
+            "endpoint": "/api/v2/signup_for_web",
+            "actionName": "v2/signup_for_web/s_l/web_platform",
+            "methods": ["POST"]
+          }
+        ],
+        "remThemeDisallowList": [],
+        "pushNotificationsKey": "BDv0_JPkhZNd3otuXgr4F3aM1DcLpLs9tu_QPTAOB5uSyOjHWAFm4opkrXb0yRwlSqpp3oTwukrUY17vorQReVo",
+        "clientHints": {
+          "deviceMemory": 8,
+          "devicePixelRatio": 1,
+          "effectiveConnectionType": "4g",
+          "userAgent": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+          "userAgentPlatform": "\"Linux\"",
+          "userAgentPlatformVersion": "\"6.8.12\"",
+          "prefersMobileExperience": false,
+          "viewportWidth": 545
+        },
+        "authModalProps": {
+          "baseDirection": "ltr",
+          "dataURLs": {
+            "login": "/v2/login_modal",
+            "signup": "/v2/signup_modal",
+            "logout": "/signed_out_modal.json",
+            "otp": "/otp_modal.json"
+          },
+          "phrases": {},
+          "trebuchets": {}
+        },
+        "isAppShell": false,
+        "isPwa": false,
+        "forcePwaDeprecated": false,
+        "coreGuestLoopCdnExperiments": {},
+        "isValidMMTLoop": true,
+        "wwwCdnProvider": "Akamai",
+        "pageGeneratedAt": 1733494466255,
+        "isSEORequest": false,
+        "exploreTreatments": [
+          {
+            "experiment": "checkout_lean_section_fragments_v6",
+            "treatmentName": "treatment_unknown",
+            "log": "manual"
+          },
+          {
+            "experiment": "web_search_use_niobe_minimalist_client_v1",
+            "treatmentName": "treatment"
+          },
+          {
+            "experiment": "web_use_minimalist_client_p2_map_and_header_v2",
+            "treatmentName": "treatment_unknown",
+            "log": "manual"
+          },
+          {
+            "experiment": "brotli_html_v3",
+            "treatmentName": "treatment_unknown",
+            "log": "auto"
+          },
+          {
+            "experiment": "flex_destinations_jan_2022_category_rank_v1",
+            "treatmentName": "treatment_unknown",
+            "log": "auto"
+          },
+          {
+            "experiment": "stays_search_rehydration_desktop_v6",
+            "treatmentName": "treatment",
+            "treatmentFlag": "stays_search_rehydration_treatment_desktop",
+            "log": "manual"
+          },
+          {
+            "experiment": "stays_search_rehydration_moweb_v6",
+            "treatmentName": "treatment",
+            "treatmentFlag": "stays_search_rehydration_treatment_moweb",
+            "log": "manual"
+          },
+          {
+            "experiment": "places_filter_ranking_optimization_china_web",
+            "treatmentName": "treatment_unknown"
+          },
+          {
+            "experiment": "places_filter_ranking_optimization_japan_web",
+            "treatmentName": "treatment_unknown"
+          },
+          {
+            "experiment": "places_filter_ranking_optimization_korea_web",
+            "treatmentName": "treatment_unknown"
+          },
+          {
+            "experiment": "places_filter_ranking_optimization_hmt_web",
+            "treatmentName": "treatment_unknown"
+          },
+          {
+            "experiment": "experience_pdp_uncaching",
+            "treatmentName": "treatment_unknown",
+            "log": "manual"
+          },
+          {
+            "experiment": "stays_pdp_photo_tour_consolidation_web_v2",
+            "treatmentName": "treatment_unknown",
+            "log": "manual"
+          },
+          {
+            "experiment": "disable_early_flush_skeleton",
+            "treatmentName": "treatment_unknown"
+          }
+        ],
+        "customPrepareNiobeData": {
+          "forcePwaDeprecated": false,
+          "deviceUsagePreferences": {
+            "isReduceStorageEnabled": false,
+            "isReduceNetworkDataEnabled": false,
+            "isInitialized": true
+          },
+          "launchPdpUncaching": true
+        },
+        "v3Search": true,
+        "deviceUsagePreferences": {
+          "isReduceStorageEnabled": false,
+          "isReduceNetworkDataEnabled": false,
+          "isInitialized": true
+        },
+        "disable_google_tag_manager": false,
+        "disable_google_recaptcha": true,
+        "disable_google_analytics": true
+      }
+    ],
+    [
+      "Hyperloop{_compat_}Token",
+      {
+        "IS_DEV": false,
+        "HYPERLOOP_ENV": "core-guest-loop-production",
+        "IS_ADMIN": false,
+        "behavioralUid": "1733494442_EANmYzMDliNmRjN2",
+        "i18nInit": {
+          "locale": "pt",
+          "base_direction": "ltr",
+          "language": "pt",
+          "moment_locale": "pt-br",
+          "country": "BR",
+          "tld_country": "BR",
+          "current_locale_name": "Português (BR)"
+        },
+        "deprecatedFormFactor": "DESKTOP",
+        "formFactor": "wide",
+        "userAttributes": {
+          "device_profiling_session_id": "1733494442--240c7f6c3180fb69d60d00f3",
+          "giftcard_profiling_session_id": "1733494442--f7094ec5b5c94e10bc1fa18e",
+          "reservation_profiling_session_id": "1733494442--8ed2860454c6f4327d984257",
+          "curr": "BRL"
+        },
+        "airbnbUserAttributes": {},
+        "erfConfig": {
+          "experiences_host_acquisition_improved_header_cta_v2": {
+            "subject": "visitor",
+            "buckets": 200,
+            "percent_exposed": 100,
+            "treatments": [
+              { "name": "control", "buckets": 100 },
+              { "name": "treatment", "buckets": 100 }
+            ],
+            "hashing_key": "experiences_host_acquisition_improved_header_cta",
+            "sitar_overrides": {},
+            "trebuchets": []
+          },
+          "web_tcpa_compliance": {
+            "subject": "user",
+            "buckets": 100,
+            "percent_exposed": 100,
+            "treatments": [{ "name": "treatment", "buckets": 100 }],
+            "hashing_key": "web_tcpa_compliance",
+            "sitar_overrides": {},
+            "trebuchets": []
+          },
+          "installed_pwa": {
+            "subject": "visitor",
+            "buckets": 2,
+            "percent_exposed": 10,
+            "treatments": [
+              { "name": "control", "buckets": 1 },
+              { "name": "treatment", "buckets": 1 }
+            ],
+            "hashing_key": "installed_pwa",
+            "sitar_overrides": {},
+            "trebuchets": []
+          },
+          "installed_pwa_parallel": {
+            "subject": "visitor",
+            "buckets": 2,
+            "percent_exposed": 10,
+            "treatments": [
+              { "name": "control", "buckets": 1 },
+              { "name": "treatment", "buckets": 1 }
+            ],
+            "hashing_key": "installed_pwa_parallel",
+            "sitar_overrides": {},
+            "trebuchets": []
+          },
+          "contact_us_redirect_to_contact_us_form_on_rate_limit": {
+            "subject": "visitor",
+            "buckets": 100,
+            "percent_exposed": 100,
+            "treatments": [{ "name": "treatment", "buckets": 100 }],
+            "hashing_key": "contact_us_redirect_to_contact_us_form_on_rate_limit",
+            "sitar_overrides": {},
+            "trebuchets": []
+          }
+        },
+        "trebuchetContext": {
+          "tld_country": "BR",
+          "hostname": "www.airbnb.com.br",
+          "visitorID": "1733494442_EANmYzMDliNmRjN2",
+          "visitorIdCRC": 1104459957,
+          "locale": "pt",
+          "visitorCountry": "BR",
+          "language": "pt"
+        },
+        "trebuchetConfig": {
+          "web.networking_service_prefetch_kill_switch": {
+            "ssr_resolved": false
+          },
+          "disable-scroll-driven-polyfill": { "ssr_resolved": false },
+          "fetch-scroll-driven-stylesheets": { "ssr_resolved": false },
+          "trebuchet_launch_iso_client": { "ssr_resolved": false },
+          "kill_connection_status_provider": { "ssr_resolved": false },
+          "ui_state.enable_logging": { "ssr_resolved": false },
+          "tos_kill_switch_web": { "ssr_resolved": true },
+          "tos.toggle_booking_flow_check": { "ssr_resolved": true },
+          "kill_web_websocket_client_ping": { "ssr_resolved": false },
+          "trust_ai_disable_recaptchav3": { "ssr_resolved": true },
+          "google_recaptcha_v3_web_logging": { "ssr_resolved": true },
+          "instrument_search_results_images": { "ssr_resolved": true },
+          "pps_web_enable_alt": { "ssr_resolved": false },
+          "web.niobe.normalized_subscription_killswitch": {
+            "ssr_resolved": true
+          },
+          "web_normalization_rearchitecture_killswitch": {
+            "ssr_resolved": true
+          },
+          "monorail_deprecation.capture_v2_call_sites.web": {
+            "ssr_resolved": true
+          },
+          "monorail_deprecation.capture_v2_call_sites.web.include_common_endpoints": {
+            "ssr_resolved": false
+          },
+          "enable.user_consent_data_layer.logging": { "ssr_resolved": true },
+          "enable.user_consent_data_layer.dl_publishing": {
+            "ssr_resolved": true
+          },
+          "partytown_gtm_force_enabled": { "ssr_resolved": false },
+          "eight_bit_belo_localhost_force": { "ssr_resolved": false },
+          "eight_bit_belo": { "ssr_resolved": true },
+          "web_tld_privacy_regions": { "ssr_resolved": true },
+          "messaging_standard_action_history_handler": { "ssr_resolved": true },
+          "web.deprecate_monorail_profile_img": { "ssr_resolved": true },
+          "header_avatar_web_enabled": { "ssr_resolved": true },
+          "web_bypass_manual_flush": { "ssr_resolved": true },
+          "web_bypass_manual_flush_force": { "ssr_resolved": false },
+          "ehlp.disable": { "ssr_resolved": false },
+          "profile-button.balanced-sizing": { "ssr_resolved": true },
+          "optimize_img_sources_beyond_viewport": { "ssr_resolved": true },
+          "enable_web_prefetch_hinting": { "ssr_resolved": true },
+          "language_selector.show_mrkn": { "ssr_resolved": false },
+          "portals_ssr_mismatch_fix": { "ssr_resolved": true },
+          "force_react_18_new_root_api": { "ssr_resolved": false },
+          "force_disable_concurrent_slots": { "ssr_resolved": false },
+          "force_enable_concurrent_slots": { "ssr_resolved": false },
+          "web.a11y.enable_landscape": { "ssr_resolved": false },
+          "payments.sanctions.exclude_ruble_currency_from_selector_web": {
+            "ssr_resolved": true
+          },
+          "payins.currency.update_url_param": { "ssr_resolved": true },
+          "api_web_client_migration.fejax.enabled": { "ssr_resolved": true },
+          "api_web_client_migration.fejax.signup_login_dls_shared.kill_switch": {
+            "ssr_resolved": true
+          },
+          "niobe.rest.error_logging.kill_switch": { "ssr_resolved": false },
+          "hodor_sxs_enabled": { "ssr_resolved": false },
+          "force_in_hodor_signup_for_web": { "ssr_resolved": false },
+          "force_in_soa_web_login": { "ssr_resolved": false },
+          "users_soa_web_oauth_facebook_force_in": { "ssr_resolved": false },
+          "users_soa_web_oauth_facebook_launch": { "ssr_resolved": false },
+          "users_soa_web_oauth_apple_force_in": { "ssr_resolved": false },
+          "users_soa_web_oauth_apple_launch": { "ssr_resolved": true },
+          "users_soa_web_oauth_google_force_in": { "ssr_resolved": false },
+          "users_soa_web_oauth_google_launch": { "ssr_resolved": true },
+          "users_soa_web_oauth_naver_force_in": { "ssr_resolved": false },
+          "users_soa_web_oauth_naver_launch": { "ssr_resolved": true },
+          "web.phone_recycling.force_out": { "ssr_resolved": false },
+          "web.phone_recycling.force_in": { "ssr_resolved": false },
+          "web.phone_recycling": { "ssr_resolved": false },
+          "guest_header.host_referrals_header_item_force": {
+            "ssr_resolved": false
+          },
+          "condensed_review_flow_web_force_out": { "ssr_resolved": true },
+          "condensed_review_flow_web_force_in": { "ssr_resolved": false },
+          "resizeobserver_no_raf_boundary": { "ssr_resolved": false },
+          "dragon5_china_licenses_web_force_in": { "ssr_resolved": false },
+          "display_german_tuv_cookie_policy_link": { "ssr_resolved": true },
+          "permanent_sale_opt_out_article_force_in": { "ssr_resolved": false },
+          "permanent_sale_opt_out_article_force_out": { "ssr_resolved": false },
+          "permanent_sale_opt_out_article": { "ssr_resolved": false },
+          "display_footer_cookie_policy_link": { "ssr_resolved": false },
+          "storefronts_giftcards_footer_link_enabled": {
+            "ssr_resolved": false
+          },
+          "simple_footer.enable_host_classes_link": { "ssr_resolved": true },
+          "ad_landing_restrict_access": { "ssr_resolved": false },
+          "m3_csp_safeguard_desktop_footer_force_in": { "ssr_resolved": false },
+          "m3_csp_safeguard_global": { "ssr_resolved": false },
+          "m3_csp_safeguard_desktop_footer": { "ssr_resolved": true },
+          "merch_monthly_weekly_calendar_tip_disable_impression_capping_web": {
+            "ssr_resolved": false
+          },
+          "disable_lottie_main_thread": { "ssr_resolved": false },
+          "enable_lottie_expressions": { "ssr_resolved": false },
+          "h2o_autocomplete_custom_num_of_results": { "ssr_resolved": false },
+          "web.search_input_h2o_autosuggestions.force_in": {
+            "ssr_resolved": false
+          },
+          "web.search_input_h2o_autocomplete.force_in": {
+            "ssr_resolved": false
+          },
+          "merch_monthly_weekly_calendar_tip_web": { "ssr_resolved": false },
+          "form_factor.panel_form_factor.enabled": { "ssr_resolved": false },
+          "web_delay_scroll_to_top_on_client_side_routing": {
+            "ssr_resolved": true
+          },
+          "gp.web.screen_manager_future": { "ssr_resolved": false },
+          "gp.web.screen_manager_controls_modals": { "ssr_resolved": false },
+          "gp.web.magic_move": { "ssr_resolved": false },
+          "gp_web_stable_layouts": { "ssr_resolved": true },
+          "gp_jumbo_modal_hide_header": { "ssr_resolved": true },
+          "gp.web.set_modal_padding": { "ssr_resolved": true },
+          "gp.web.set_is_modal_context": { "ssr_resolved": true },
+          "web_scroll_direction_change_enabled": { "ssr_resolved": false },
+          "web_scroll_direction_change_launched": { "ssr_resolved": false },
+          "gp.dont_render_nav_placement_if_empty": { "ssr_resolved": true },
+          "page_slot_force_separate_render": { "ssr_resolved": true },
+          "enable_react_profiler_query_param": { "ssr_resolved": false },
+          "pageslot_cookie_config_override": { "ssr_resolved": false },
+          "gp-section-wrapper-display-contents": { "ssr_resolved": true },
+          "explore_gp.use_compact_layout_on_wide_pwa": {
+            "ssr_resolved": false
+          },
+          "enable_paint_containment_drawer": { "ssr_resolved": false },
+          "strict_search_containment_moweb": { "ssr_resolved": true },
+          "reduce_p2_drawer_layers": { "ssr_resolved": true },
+          "today_tab.web.masked_phone_number": { "ssr_resolved": true },
+          "media_foundation.web.hls_cap_level_to_player_size": {
+            "ssr_resolved": true
+          },
+          "web.video-performance-metrics": { "ssr_resolved": false },
+          "a4p_header_footer_entry": { "ssr_resolved": true },
+          "china_m3_private_room": { "ssr_resolved": false },
+          "china_outbound.m3_safety_line.chatbot_entry": {
+            "ssr_resolved": false
+          },
+          "web.proative_wishlist.force": { "ssr_resolved": true },
+          "web.proative_wishlist_v2.force": { "ssr_resolved": true },
+          "wishlist_allow_new_share_link_web": { "ssr_resolved": true },
+          "enable_new_native_share": { "ssr_resolved": true },
+          "facebook_sdk_kill_switch": { "ssr_resolved": false },
+          "facebook_sdk_default_off_country_toggle": { "ssr_resolved": true },
+          "enable_carousel_contentvisibility": { "ssr_resolved": false },
+          "gp.core_ui.update_text_area_from_other_sections": {
+            "ssr_resolved": true
+          },
+          "stays_pdp_show_auto_expand_textarea": { "ssr_resolved": true },
+          "gp.forms.reset-errors-on-unmount": { "ssr_resolved": true },
+          "payments.india.adyen.india.vaulting.enabled": {
+            "ssr_resolved": false
+          },
+          "payments.quick_pay.coupon_a11y.force_in": { "ssr_resolved": false },
+          "payments.quick_pay.coupon_a11y.enabled": { "ssr_resolved": false },
+          "confirm_and_pay_loader_v2_payment_friction_force": {
+            "ssr_resolved": false
+          },
+          "confirm_and_pay_loader_v2_blocked_reservation_friction_kill_switch": {
+            "ssr_resolved": false
+          },
+          "m1_checkout_video_loader_web_force": { "ssr_resolved": false },
+          "m1_checkout_video_loader_web": { "ssr_resolved": true },
+          "payments.show_resume_payment_failure_message": {
+            "ssr_resolved": true
+          },
+          "plugin.adyen.india.upi.modal.migration": { "ssr_resolved": false },
+          "plugin.adyen.india.upi_id.modal.migration": {
+            "ssr_resolved": false
+          },
+          "payments.new_user_verification_flow.generic_qr.enabled": {
+            "ssr_resolved": true
+          },
+          "quick_pay.wechat.modal.migration": { "ssr_resolved": false },
+          "plugin.adyen.belgium.payconiq.mobile": { "ssr_resolved": false },
+          "quick_pay.fpx.use_generic_bank_selection": { "ssr_resolved": false },
+          "payments.quickpay.support_discover_on_inr": {
+            "ssr_resolved": false
+          },
+          "quick_pay.razorpay.skip_payment_loader": { "ssr_resolved": false },
+          "payments.quickpay.omit_tokens": { "ssr_resolved": false },
+          "plugin_adyen_india.upi.id.vaulting.enabled": {
+            "ssr_resolved": false
+          },
+          "quick_pay.prevent_null_selected_payment_option": {
+            "ssr_resolved": false
+          },
+          "payments.regulatory_compliance.sca.fingerprint_warmup": {
+            "ssr_resolved": true
+          },
+          "payments.regulatory_compliance.enable_proactive_sca_for_new_routes": {
+            "ssr_resolved": false
+          },
+          "payments.regulatory_compliance.reuse_bt_client_token": {
+            "ssr_resolved": false
+          },
+          "payments.viaduct.guest_sca.create_instrument.google_pay": {
+            "ssr_resolved": true
+          },
+          "payments.inr.pa.cb.enable": { "ssr_resolved": false },
+          "quickpay.web.get_checkout_api_request_content": {
+            "ssr_resolved": true
+          },
+          "argo.filter_out_rub": { "ssr_resolved": true },
+          "quickpay.postreloadfocus.currency": { "ssr_resolved": false },
+          "identity.web.legal_name.use_custom_fov_modal": {
+            "ssr_resolved": true
+          },
+          "api_web_client_migration.fejax.account_fov.kill_switch": {
+            "ssr_resolved": true
+          },
+          "identity.enable_handoff_to_phone_number_collected": {
+            "ssr_resolved": true
+          },
+          "korean_account_fov_use_universal_link_instead_of_scheme": {
+            "ssr_resolved": true
+          },
+          "identity.enable_switched_order_select_type": {
+            "ssr_resolved": false
+          },
+          "web_auto_capture_redesign_force_in": { "ssr_resolved": false },
+          "gov_id_auto_capture_redesign": { "ssr_resolved": false },
+          "identity.web.display_non_sticky_footer": { "ssr_resolved": true },
+          "identity.web.display_icons": { "ssr_resolved": true },
+          "idv.biometrics_opt_in_force_in": { "ssr_resolved": false },
+          "idv.biometrics_opt_in": { "ssr_resolved": false },
+          "nezha_hybrid_google_maps_version_follow_web": {
+            "ssr_resolved": false
+          },
+          "identity.safari_15_webcam_workaround_kill_switch": {
+            "ssr_resolved": false
+          },
+          "identity.force_wrong_side_with_face_web": { "ssr_resolved": false },
+          "identity.force_wrong_side_web": { "ssr_resolved": false },
+          "identity.force_only_show_wrong_side_web": { "ssr_resolved": false },
+          "identity.enable_side_detection_web": { "ssr_resolved": false },
+          "wishlist_sync_mirror_writes_web": { "ssr_resolved": true },
+          "dls.avatar.monograms_color_enabled": { "ssr_resolved": false },
+          "only_on_image_quality_upgrade": { "ssr_resolved": true },
+          "only_on_image_resolution_upgrade_2560": { "ssr_resolved": false },
+          "only_on_image_resolution_upgrade_1920": { "ssr_resolved": false },
+          "only_on_image_resolution_upgrade_1680": { "ssr_resolved": false },
+          "only_on_image_resolution_upgrade_1440": { "ssr_resolved": true },
+          "pdp_image_gallery_upgrade_web": { "ssr_resolved": false },
+          "web.monorail.phone_number.countries": { "ssr_resolved": true },
+          "account_settings_edit_profile_otp_code_length": {
+            "ssr_resolved": false
+          },
+          "web.account_settings_otp_a11y_updates": { "ssr_resolved": true },
+          "media_foundation.web.media_upload.video_duration_enforcement": {
+            "ssr_resolved": true
+          },
+          "user_profile.passport_content_m1_2024": { "ssr_resolved": true },
+          "m1_upload_profile_photos_auto_zoom_enabled": {
+            "ssr_resolved": false
+          },
+          "m1_upload_profile_photos_learn_more_enabled": {
+            "ssr_resolved": true
+          },
+          "m1_upload_profile_photos.sign_up_force_in": {
+            "ssr_resolved": false
+          },
+          "m1_upload_profile_photos.sign_up_force_out": {
+            "ssr_resolved": false
+          },
+          "m1_upload_profile_photos.umbrella": { "ssr_resolved": false },
+          "m1_upload_profile_photos.sign_up": { "ssr_resolved": true },
+          "m1_upload_profile_photos.booking_photo_force_in": {
+            "ssr_resolved": false
+          },
+          "m1_upload_profile_photos.booking_photo_force_out": {
+            "ssr_resolved": false
+          },
+          "m1_upload_profile_photos.booking_photo": { "ssr_resolved": true },
+          "dls_account_settings_payments_web_force_in": {
+            "ssr_resolved": false
+          },
+          "dls_account_settings_payments_web": { "ssr_resolved": true },
+          "dls_account_settings_payouts_web_force_in": {
+            "ssr_resolved": false
+          },
+          "dls_account_settings_payouts_web": { "ssr_resolved": true },
+          "dls_compliance_signup_login_web_force_in": { "ssr_resolved": false },
+          "dls_compliance_signup_login_web": { "ssr_resolved": false },
+          "p3_defer_modals": { "ssr_resolved": true },
+          "host_dls.location.google_places_api": { "ssr_resolved": false },
+          "map.cartographair.logging.enabled": { "ssr_resolved": true },
+          "p2_p3_tooltip_simplification_force_in": { "ssr_resolved": false },
+          "china_price_promotion_web_force_in": { "ssr_resolved": false },
+          "switch_to_v_point": { "ssr_resolved": true },
+          "china_p2_preload_image_disabled": { "ssr_resolved": false },
+          "china_p2_preload_image_force_in": { "ssr_resolved": true },
+          "china_p2_preload_image": { "ssr_resolved": false },
+          "enable_listing_card_scroll_driven_animation": {
+            "ssr_resolved": true
+          },
+          "web.prefetch_passport_profile.enabled": { "ssr_resolved": true },
+          "web.profile_dynamic_prompts": { "ssr_resolved": false },
+          "m1_release.passport_stamps.launch": { "ssr_resolved": true },
+          "m13_2024.passport": { "ssr_resolved": false },
+          "prefetch_disabled": { "ssr_resolved": false },
+          "enable_prefetch_on_safari": { "ssr_resolved": true },
+          "messaging.feedback_widget": { "ssr_resolved": true },
+          "web.identity.losing_idv_status": { "ssr_resolved": true },
+          "only_on_share_button_enable_preload": { "ssr_resolved": true },
+          "enable_share_listing_identifier_a11y_label_web": {
+            "ssr_resolved": true
+          },
+          "checkout_gp_migration_prefetch_web": { "ssr_resolved": true },
+          "checkout_state_recovery_killswitch": { "ssr_resolved": false },
+          "checkout_p4_order_id_url_cache_enabled": { "ssr_resolved": true },
+          "checkout_create_route_wait_for_data_enabled": {
+            "ssr_resolved": true
+          },
+          "checkout.tools.data_mutation.killswitch": { "ssr_resolved": false },
+          "web.pdp.availability_calendar.fetch_12_months": {
+            "ssr_resolved": true
+          },
+          "enable_fuji_discounted_label_style": { "ssr_resolved": true },
+          "web_stays_pdp_guest_picker_server_driven": { "ssr_resolved": true },
+          "pdp_experiences_video_posttask_moweb": { "ssr_resolved": false },
+          "airlite.experiences.disable_video_autoplay": {
+            "ssr_resolved": true
+          },
+          "disable_remarketing_data_v2": { "ssr_resolved": false },
+          "web.dragon5_pdp_review_search_relocate": { "ssr_resolved": false },
+          "web.experiences_pdp.new_review_modal": { "ssr_resolved": true },
+          "web.host_header.use_grid_layout": { "ssr_resolved": true },
+          "guidebook.user_profile_dropdown.force": { "ssr_resolved": false },
+          "web.host_header.z_index_adjust": { "ssr_resolved": true },
+          "host_notifications_badging.web": { "ssr_resolved": true },
+          "moweb_app_switch_fab": { "ssr_resolved": true },
+          "exp.host.messaging.filter_listing.launch": { "ssr_resolved": true },
+          "enable_map_paint_containment": { "ssr_resolved": true },
+          "map.log_performance_experimental": { "ssr_resolved": true },
+          "enable_maps_copyright_containment": { "ssr_resolved": false },
+          "map.google_maps.tilesloaded.event": { "ssr_resolved": true },
+          "map_google_static_map_signed_url": { "ssr_resolved": false },
+          "map.place_icons_missing.event": { "ssr_resolved": true },
+          "search_for_poi": { "ssr_resolved": false },
+          "auto_search_map_with_cache_force": { "ssr_resolved": false },
+          "auto_search_map_without_cache_force": { "ssr_resolved": false },
+          "search.vector_map.kill_switch": { "ssr_resolved": false },
+          "map_a11y_labels_desktop": { "ssr_resolved": false },
+          "map_a11y_labels_moweb": { "ssr_resolved": false },
+          "map_a11y_2022_moweb": { "ssr_resolved": true },
+          "map_a11y_2022_desktop": { "ssr_resolved": true },
+          "map_poi_s2_web_debug_enabled": { "ssr_resolved": false },
+          "map_web_debug_enabled": { "ssr_resolved": false },
+          "map_show_map_badge_on_desktop": { "ssr_resolved": false },
+          "map_web_transit_layer_feature_enabled": { "ssr_resolved": false },
+          "map_poi_travel_time_desktop": { "ssr_resolved": false },
+          "map_poi_travel_time_moweb": { "ssr_resolved": false },
+          "maps.reset_fit_bounds_state_only_if_handler_called": {
+            "ssr_resolved": false
+          },
+          "map_moweb_large_card_kill_switch": { "ssr_resolved": false },
+          "luxe_pdp_hide_dateless_contact": { "ssr_resolved": true },
+          "luxe_pdp_last_divider_fe": { "ssr_resolved": true },
+          "lux.luxe_pdp.new_inquiry_endpoint": { "ssr_resolved": true },
+          "lux.enable_pdp_layout_unification": { "ssr_resolved": true },
+          "elvis_hero_disable_max_height": { "ssr_resolved": true },
+          "pdp_optical_square_hero": { "ssr_resolved": false },
+          "web_m3_pdp_new_cohost": { "ssr_resolved": true },
+          "gx.seo_hide_subtitle_from_linking_section": {
+            "ssr_resolved": false
+          },
+          "pdp_web_floating_footer_resized_text_update": {
+            "ssr_resolved": true
+          },
+          "kill-all-intercepts": { "ssr_resolved": false },
+          "kill-qualtrics-intercepts": { "ssr_resolved": false },
+          "moweb_ios_safari_photo_modal_memory_optimization": {
+            "ssr_resolved": true
+          },
+          "cohost_carousel_2025_q1": { "ssr_resolved": false },
+          "meet_your_host_white_background": { "ssr_resolved": true },
+          "stays_pdp_show_updated_business_details": { "ssr_resolved": true },
+          "early_access.new_host_activation_enabled": { "ssr_resolved": false },
+          "early_access.cohost_activation_enabled": { "ssr_resolved": false },
+          "mediation.gp.navbar_title.enabled_in_modal": {
+            "ssr_resolved": false
+          },
+          "moweb_app_install_banner_in_cookie_consent_country": {
+            "ssr_resolved": false
+          },
+          "moweb_app_install_banner_force_in": { "ssr_resolved": false },
+          "moweb_app_install_banner_allow_logged_in_users": {
+            "ssr_resolved": true
+          },
+          "elvis_disable_app_install_banner": { "ssr_resolved": true },
+          "disable_app_install_banner_homepage": { "ssr_resolved": false },
+          "moweb_app_install_banner_m1_behavior": { "ssr_resolved": true },
+          "web.pdp.hide_back_button": { "ssr_resolved": false },
+          "moweb.pdp.auto_focus_nav": { "ssr_resolved": true },
+          "web_pdp_show_translation_nux": { "ssr_resolved": true },
+          "lottie_worker_migration": { "ssr_resolved": true },
+          "uhe_tpi_embedded_flow": { "ssr_resolved": false },
+          "uhe.collection.launch": { "ssr_resolved": false },
+          "payments.gp.use_zero_mutation_for_empty_float_input": {
+            "ssr_resolved": true
+          },
+          "payments.payouts.soa_tpi_embedded_flow": { "ssr_resolved": true },
+          "tax.experience.us_kyc.check_referrer_enabled": {
+            "ssr_resolved": false
+          },
+          "tax.experience.earnings_dashboard.redirect": {
+            "ssr_resolved": true
+          },
+          "flex_forms.field_state.require_initial_values": {
+            "ssr_resolved": false
+          },
+          "flex_conditions.not_empty.field_unspecified": {
+            "ssr_resolved": true
+          },
+          "flex_conditions.string_array_includes.null_field": {
+            "ssr_resolved": false
+          },
+          "flex_forms.xray_events": { "ssr_resolved": false },
+          "tax.experience.transition_animation_enabled": {
+            "ssr_resolved": false
+          },
+          "tax.experience.transition_webkit_enabled": { "ssr_resolved": false },
+          "china.address_autocomplete_exclude_street": { "ssr_resolved": true },
+          "china.address_autocomplete_suggest_precise_only": {
+            "ssr_resolved": true
+          },
+          "tax.experience.form_updates": { "ssr_resolved": false },
+          "tax.experience.w8eci_recertification_expired_flow_enabled": {
+            "ssr_resolved": false
+          },
+          "todaytab.n16_layout.force_in": { "ssr_resolved": false },
+          "todaytab.n16_layout": { "ssr_resolved": true },
+          "n16_2022_superhost_guide_launch": { "ssr_resolved": true },
+          "ambassadors_updated_error_screens_web": { "ssr_resolved": true },
+          "enable_n16_matching_flow_current_location": { "ssr_resolved": true },
+          "m1_passport": { "ssr_resolved": true },
+          "upfront_pricing.quick_pay.remove_explantion_data": {
+            "ssr_resolved": false
+          },
+          "quick_pay.remove_explantion_data": { "ssr_resolved": false },
+          "quickpay.fetch_bill_polling_fix.web_enabled": {
+            "ssr_resolved": false
+          },
+          "checkout.stays.quickpay_logs.only_log_with_CC.killswitch": {
+            "ssr_resolved": false
+          },
+          "checkout.stays.quickpay_logs.allow_duplicates_without_CC.killswitch": {
+            "ssr_resolved": false
+          },
+          "pgng.adyen.upi_qr_traffic.enable": { "ssr_resolved": false },
+          "test_adyen_cvv_only_validation_fix": { "ssr_resolved": false },
+          "quickpay.checkout_tokens.refetch": { "ssr_resolved": true },
+          "a4w_3pb_improvement_airbnb_org": { "ssr_resolved": true },
+          "desktop_p4_to_p5_fade_killswitch": { "ssr_resolved": false },
+          "m1_co_travelers": { "ssr_resolved": true },
+          "force_in_gtag_partytown": { "ssr_resolved": false },
+          "pageshell_dynamic_height": { "ssr_resolved": true },
+          "web_default_rem_theme": { "ssr_resolved": true },
+          "deliver.sndi.with.access.forward_cookies": { "ssr_resolved": true },
+          "hodor_domain_switch_send.use_blob": { "ssr_resolved": false },
+          "gx_gifting_enable_giftcards_parallax": { "ssr_resolved": true },
+          "host_dls_google_static_map_signed_url": { "ssr_resolved": true },
+          "mys.photo_edit_modal.remove_cancel_button": { "ssr_resolved": true },
+          "payments.mpl.pay_early_disabled_explanation": {
+            "ssr_resolved": false
+          },
+          "payments.mpl.pay_early_disabled_explanation.force_in": {
+            "ssr_resolved": false
+          },
+          "gift_cards.payment_options_modal.force_in": {
+            "ssr_resolved": false
+          },
+          "gift_cards.new_post_claim_flow": { "ssr_resolved": true },
+          "gift_cards.claim_page_login_modal.force_in": {
+            "ssr_resolved": false
+          },
+          "aircover_for_guests_lottie_based_ttfmp": { "ssr_resolved": true },
+          "disable_structured_clone": { "ssr_resolved": true },
+          "checkout.messaging_risk_check_migration.enabled": {
+            "ssr_resolved": false
+          },
+          "enable_main_split_content_containment": { "ssr_resolved": true },
+          "china_dragon5_tos_enable": { "ssr_resolved": false },
+          "china_tos_update_consent_web": { "ssr_resolved": true },
+          "incognia_web_device_fingerprinting_enabled": {
+            "ssr_resolved": false
+          },
+          "gti_segmented_design_rule_based_testing": { "ssr_resolved": true },
+          "remove_dob_on_signups_force": { "ssr_resolved": false },
+          "remove_dob_on_signups": { "ssr_resolved": true },
+          "enable_suggested_login_force": { "ssr_resolved": false },
+          "p4_bingo_button_updates_desktop": { "ssr_resolved": true },
+          "web.m1.fix_names_force_in": { "ssr_resolved": false },
+          "web.m1.fix_names_enabled": { "ssr_resolved": true },
+          "oauth_popup": { "ssr_resolved": true },
+          "web.signup_sanitize_all_redirect_url_post_auth": {
+            "ssr_resolved": true
+          },
+          "fingerprintjs_web_device_fingerprinting_enabled": {
+            "ssr_resolved": false
+          },
+          "remarketing_jitney_logging": { "ssr_resolved": true },
+          "disable_view_transition_navigation": { "ssr_resolved": false },
+          "booking.pdp.n16_guest_standards.signup.launch": {
+            "ssr_resolved": false
+          },
+          "web.signup_login_enable_admin_menu": { "ssr_resolved": false },
+          "booking_auth_moweb_signup_to_book_title_force": {
+            "ssr_resolved": false
+          },
+          "social_signup_skip_unmounted": { "ssr_resolved": true },
+          "web_trust_sections_updated_profile_photo": { "ssr_resolved": false },
+          "holiday_2023_gifting_landing_updates": { "ssr_resolved": false },
+          "aircover_lp_redirect_to_hc_article": { "ssr_resolved": true },
+          "gt.content_platform.article_access": { "ssr_resolved": true },
+          "contact_host_sections_preload_query_v4_force_in": {
+            "ssr_resolved": false
+          },
+          "contact_host_sections_preload_query_v4": { "ssr_resolved": false },
+          "m1_china_brand_update": { "ssr_resolved": true },
+          "deprecate_search_blocks_pdp": { "ssr_resolved": false },
+          "is_icons_category_first_web": { "ssr_resolved": false },
+          "gx_stays_disable_deferred_sections_request_on_error": {
+            "ssr_resolved": true
+          },
+          "force_pdp_failure_for_cypress": { "ssr_resolved": false },
+          "china_guest_platform_moweb_v2": { "ssr_resolved": true },
+          "seo_metadata_skip_deferred": { "ssr_resolved": true },
+          "affiliates_p3_to_p2_redirect_demo": { "ssr_resolved": true },
+          "affiliates_p3_to_p2_redirect_hometogo": { "ssr_resolved": false },
+          "affiliates_p3_to_p2_redirect_trivago": { "ssr_resolved": true },
+          "ssr_pdp_impression_id": { "ssr_resolved": true },
+          "erf-gx.acp_id_enabled": { "ssr_resolved": false },
+          "gx.acp_id_enabled": { "ssr_resolved": true },
+          "kill_ssr_interactivity_enhancements": { "ssr_resolved": false },
+          "enable_p2_hidden_controls": { "ssr_resolved": false },
+          "experiences_guest_place_pdp_experience_link": {
+            "ssr_resolved": true
+          },
+          "place_pdp_remove_third_party_components": { "ssr_resolved": true },
+          "a4p_host_associates": { "ssr_resolved": false },
+          "exp_p5_5_redirect_to_t1": { "ssr_resolved": true },
+          "exp_p5_5_redirect_to_t1_force_in": { "ssr_resolved": false },
+          "exp_p5_5_hide_first_section_header": { "ssr_resolved": false },
+          "exp_p5_5_oe_upsell": { "ssr_resolved": true },
+          "exp_p5_5_oe_upsell_force": { "ssr_resolved": false },
+          "hyperloop.trust_home_safety_migration": { "ssr_resolved": true },
+          "trust_landing_redirect_web": { "ssr_resolved": true },
+          "home_safety_redirect_web": { "ssr_resolved": true },
+          "p2b_form_intake_fe_launched": { "ssr_resolved": true },
+          "hostinbox.update_inbox_filters_o16": { "ssr_resolved": true },
+          "messaging_web_composebar_v2": { "ssr_resolved": false },
+          "messaging_thread_footer_slot_web": { "ssr_resolved": false },
+          "messaging.enable_threaded_replies_web": { "ssr_resolved": false },
+          "web_message_thread_under_composebar_force_show": {
+            "ssr_resolved": false
+          },
+          "summer_2024_messaging_nux_is_user_active_host": {
+            "ssr_resolved": false
+          },
+          "web.mum.user_profile_photo_upload": { "ssr_resolved": false },
+          "m1_passport_profile_reordering_force_in": { "ssr_resolved": false },
+          "m1_passport_profile_reordering_force_out": { "ssr_resolved": false },
+          "m1_upload_profile_photos.edit_profile_force_in": {
+            "ssr_resolved": false
+          },
+          "m1_upload_profile_photos.edit_profile_force_out": {
+            "ssr_resolved": false
+          },
+          "m1_upload_profile_photos.edit_profile": { "ssr_resolved": true },
+          "m3.userprofile.web": { "ssr_resolved": true },
+          "web_message_templates_milestone_1": { "ssr_resolved": false },
+          "messaging.messaging_settings_try_quick_replies_tooltip.force_show": {
+            "ssr_resolved": false
+          },
+          "messaging.messaging_settings_quick_replies_update.force_show": {
+            "ssr_resolved": false
+          },
+          "messaging_platform.viaduct_migration.new_pagination_web": {
+            "ssr_resolved": false
+          },
+          "messaging_platform_viaduct_migration.nova_pagination_enabled": {
+            "ssr_resolved": true
+          },
+          "messaging_m1_inbox_not_mark_read": { "ssr_resolved": false },
+          "read_receipts.enable_sync_protocol_subscription_web": {
+            "ssr_resolved": false
+          },
+          "messaging_platform.viaduct_migration.inbox_web": {
+            "ssr_resolved": false
+          },
+          "messaging_platform.inbox_web.only_one_preview_message": {
+            "ssr_resolved": true
+          },
+          "messaging.enable_delete_message": { "ssr_resolved": true },
+          "messaging.enable_edit_message": { "ssr_resolved": true },
+          "summer_2024_messaging_launch_web_nova": { "ssr_resolved": false },
+          "summer_2024_messaging_launch_web_nova_inbox": {
+            "ssr_resolved": false
+          },
+          "messaging_web_always_hide_support_details": {
+            "ssr_resolved": false
+          },
+          "o16_chm_global": { "ssr_resolved": true },
+          "cohost_marketplace_enabled": { "ssr_resolved": true },
+          "cohost_marketplace_web_invitation_flow_enabled": {
+            "ssr_resolved": true
+          },
+          "communications.sbui_details.official_threads": {
+            "ssr_resolved": false
+          },
+          "lux.disable_pdp_trip_design_service": { "ssr_resolved": true },
+          "niobe_web_operation_registry_disabled": { "ssr_resolved": false },
+          "enable_apollo_provider_proxy_logging": { "ssr_resolved": false },
+          "guest_reservation_detail.web.masked_phone_number_v2": {
+            "ssr_resolved": true
+          },
+          "cancellations_web_launch_2024_rdp_redirect": {
+            "ssr_resolved": true
+          },
+          "hawaii.updated_rtb_withdraw_flow": { "ssr_resolved": false },
+          "mediation.n16.mf_fix": { "ssr_resolved": true },
+          "mediation.action.force_cactch_mutation_error.enable": {
+            "ssr_resolved": true
+          },
+          "mediation.action.force_refresh_on_close.enable": {
+            "ssr_resolved": false
+          },
+          "uic_navgate_to_url_migrate": { "ssr_resolved": false },
+          "mediation.error_refetch.disable": { "ssr_resolved": false },
+          "csp.mediation.pay_with_mutation.web": { "ssr_resolved": true },
+          "itinerary_multiple_guest_name_inputs_web": { "ssr_resolved": false },
+          "rdp_facepile_tooltip_disable_cache": { "ssr_resolved": false },
+          "airkey_hrd_edit_cico_modal": { "ssr_resolved": true },
+          "airkey_hrd_edit_cico_modal_force_in": { "ssr_resolved": false },
+          "cancellation.rtb_graduation_hrd_modal.force_in": {
+            "ssr_resolved": false
+          },
+          "host_reservation_details.web.masked_phone_number": {
+            "ssr_resolved": true
+          },
+          "allowlist_to_create_zero_dollar_listings": { "ssr_resolved": false },
+          "seamless_entry_backup_entry_v2": { "ssr_resolved": true },
+          "seamless_entry_cico_v2": { "ssr_resolved": true },
+          "airkey_setup_flow_fixes": { "ssr_resolved": true },
+          "airkey_setup_flow_consent_update": { "ssr_resolved": true },
+          "messaging_prototypes.suggested_replies": { "ssr_resolved": false },
+          "messaging_prototypes.suggested_replies_demo": {
+            "ssr_resolved": false
+          },
+          "experiences_hrd": { "ssr_resolved": false },
+          "experiences.host_calendar.remove_boundary_days": {
+            "ssr_resolved": true
+          },
+          "enable_n16_details_panel_web": { "ssr_resolved": true },
+          "ambassador.host_inbox": { "ssr_resolved": true },
+          "beespecimen.use_cohosting_indexer_response": {
+            "ssr_resolved": false
+          },
+          "messaging_location_sending_search_web_force_in": {
+            "ssr_resolved": false
+          },
+          "messaging_location_sending_search_web": { "ssr_resolved": true },
+          "messaging-web-video-messages": { "ssr_resolved": false },
+          "wedding_cake_web_shiota_report_fetch_newer": {
+            "ssr_resolved": false
+          },
+          "wedding_cake_web_shiota_report_send_item": { "ssr_resolved": false },
+          "wedding_cake_web_shiota_report_newer_items": {
+            "ssr_resolved": false
+          },
+          "wedding_cake_web_shiota_report_polling": { "ssr_resolved": true },
+          "wedding_cake_web_shiota_report_mark_thread_read": {
+            "ssr_resolved": false
+          },
+          "wedding_cake_web_shiota_report_fetch_older_items": {
+            "ssr_resolved": false
+          },
+          "wedding_cake_web_shiota_report_fetch_item": {
+            "ssr_resolved": false
+          },
+          "wedding_cake_web_shiota_report_create_websocket": {
+            "ssr_resolved": false
+          },
+          "wedding_cake_web_shiota_report_reactions": { "ssr_resolved": false },
+          "messaging.killswitch.error.permission_denied": {
+            "ssr_resolved": false
+          },
+          "messaging_platform_viaduct_migration_new_sync_graphql_enforce_polling_web": {
+            "ssr_resolved": false
+          },
+          "csp.ava_shimmer_event_check.web": { "ssr_resolved": true },
+          "messaging_dependency_tracing": { "ssr_resolved": false },
+          "cotraveler_join_nux_disable_cache": { "ssr_resolved": false },
+          "exp_checkout_redirect": { "ssr_resolved": true },
+          "web.pdp.experiences_new": { "ssr_resolved": false },
+          "experiences_new_stack": { "ssr_resolved": false },
+          "wishlist_m1_nux_fast-follows_web.enable": { "ssr_resolved": true },
+          "wishlist_m1_collaborative_nux_logged_out_collaborator_kill_switch": {
+            "ssr_resolved": false
+          },
+          "gs.plan.show_unavailable_stays_pins.force_treatment": {
+            "ssr_resolved": false
+          },
+          "gs.plan.show_unavailable_stays_pins": { "ssr_resolved": true },
+          "gs.plan.show_add_to_map.force_treatment": { "ssr_resolved": false },
+          "gs.plan.show_add_to_map": { "ssr_resolved": true },
+          "search-web.listing-card.only-on-animation.killswitch": {
+            "ssr_resolved": false
+          },
+          "recently_viewed_refetch_on_mount": { "ssr_resolved": true },
+          "summer_2024_messaging_p0_nux": { "ssr_resolved": false },
+          "summer_2024_messaging_p1_nux": { "ssr_resolved": false },
+          "summer_2024_messaging_p0_nux_skip_impression_capping_test": {
+            "ssr_resolved": false
+          },
+          "summer_2024_messaging_nux_enable_force_discard": {
+            "ssr_resolved": false
+          },
+          "meassaging.legal_disclosure_launch": { "ssr_resolved": true },
+          "messaging.thread_scanning_disclosure.cs.force_show": {
+            "ssr_resolved": false
+          },
+          "messaging.thread_scanning_disclosure.default.force_show": {
+            "ssr_resolved": false
+          },
+          "use_visual_viewport_offset": { "ssr_resolved": true },
+          "messaging-everywhere-demo-enabled": { "ssr_resolved": false },
+          "cookies_banner_force_in": { "ssr_resolved": false },
+          "allow_tuv_german_cookie_preferences_copy_force_in": {
+            "ssr_resolved": false
+          },
+          "allow_tuv_german_cookie_preferences_copy": { "ssr_resolved": false },
+          "trust.privacy.cookie_banner.bright_pattern_treatment_1_force_in": {
+            "ssr_resolved": false
+          },
+          "trust.privacy.use_reject_all_backend_value": {
+            "ssr_resolved": false
+          },
+          "trust.privacy.cookie_banner.enable_bright_pattern": {
+            "ssr_resolved": false
+          },
+          "show_referral_in_header_dropdown": { "ssr_resolved": true },
+          "header_flyout_menu_wmpw": { "ssr_resolved": true },
+          "experiences_host_acquisition_improved_header_cta_v2": {
+            "ssr_resolved": true
+          },
+          "set_password_use_get_in_monorail": { "ssr_resolved": false },
+          "force_monorail_validate_reset_password_web": {
+            "ssr_resolved": false
+          },
+          "mpl.conditionally_ignore_process_after_tender_change": {
+            "ssr_resolved": true
+          },
+          "mpl.use_argo_as_a_currency_source": { "ssr_resolved": true },
+          "m1_co_travelers.invitation_preview_launch_kill_switch": {
+            "ssr_resolved": false
+          },
+          "web.preferred_name_regex_update": { "ssr_resolved": true },
+          "personal_info.government_id_rename": { "ssr_resolved": false },
+          "personal_info.display_provided_government_id_field": {
+            "ssr_resolved": false
+          },
+          "account_settings_usage_type_field.forcein": {
+            "ssr_resolved": false
+          },
+          "visibility.launch_force_in": { "ssr_resolved": false },
+          "n16_2022_visibility_account_settings_launch": {
+            "ssr_resolved": true
+          },
+          "web.beta_program.guest_profile_entry_opt_in.enabled": {
+            "ssr_resolved": false
+          },
+          "guest_referral_entry_point_web": { "ssr_resolved": true },
+          "web.account_account_settings.enable_hlp_entrypoint": {
+            "ssr_resolved": true
+          },
+          "beta_program.guest_profile_entry.enabled": { "ssr_resolved": false },
+          "web_how_it_works_enable": { "ssr_resolved": true },
+          "m3_csp_safeguard_guest_profile": { "ssr_resolved": true },
+          "hog_pwa_login_force_disable_wmpw": { "ssr_resolved": true },
+          "pwa_test_trebuchet": { "ssr_resolved": false },
+          "gift_cards_header_menu_item": { "ssr_resolved": true },
+          "api_web_client_migration.fejax.account_settings.kill_switch": {
+            "ssr_resolved": true
+          },
+          "viaduct.notification_preferences.deprecate_web_push": {
+            "ssr_resolved": false
+          },
+          "kill_web_push_notifications": { "ssr_resolved": false },
+          "moweb_push_notifications": { "ssr_resolved": true },
+          "desktop_push_notifications": { "ssr_resolved": true },
+          "web_tcpa_compliance_treb.force_in": { "ssr_resolved": false },
+          "web_tcpa_compliance_treb": { "ssr_resolved": true },
+          "trust_defenense_coworker_friction_treb.force_in": {
+            "ssr_resolved": true
+          },
+          "trust_defenense_coworker_friction_treb": { "ssr_resolved": false },
+          "account_settings.facebook_connect_deprecation.force_in": {
+            "ssr_resolved": false
+          },
+          "trust.totp_friction_employee_web_launch.force_in": {
+            "ssr_resolved": false
+          },
+          "trust.totp_friction_employee_web_launch": { "ssr_resolved": true },
+          "enable_ap_output_format_json": { "ssr_resolved": true },
+          "enable_ap_output_format_html": { "ssr_resolved": true },
+          "dsr_feedback_widget_after_download.enabled": {
+            "ssr_resolved": true
+          },
+          "dsr_feedback_widget.enabled": { "ssr_resolved": true },
+          "cookies_settings_force_in": { "ssr_resolved": false },
+          "ptools.deprecate_email_alias_at_2023_09_30": {
+            "ssr_resolved": true
+          },
+          "dragon5_coupon_center.force_in": { "ssr_resolved": false },
+          "payments.guest_wallet_soa.coupons": { "ssr_resolved": false },
+          "web.gift_cards.claim_design_updates": { "ssr_resolved": true },
+          "payments.cog_deletion": { "ssr_resolved": true },
+          "nova.become_user.add_pay_button": { "ssr_resolved": false },
+          "airbnb_org.host_recurring_donations.flow_revamp.client": {
+            "ssr_resolved": true
+          },
+          "payments.payouts.preference_page_soa_force_out": {
+            "ssr_resolved": false
+          },
+          "payments.payouts.preference_page_soa": { "ssr_resolved": true },
+          "payments.payouts.preference_page_soa_force_in": {
+            "ssr_resolved": false
+          },
+          "payments.payouts.instruments_update_soa": { "ssr_resolved": true },
+          "payments.payouts.enable_payout_methods_updated_sort_order": {
+            "ssr_resolved": true
+          },
+          "payments.payouts.china.sdui_force_in": { "ssr_resolved": true },
+          "web.payouts_tax_info_required_modal": { "ssr_resolved": false },
+          "web.payouts_tax_info_required_modal_is_dismissable": {
+            "ssr_resolved": false
+          },
+          "web.calendar_tax_info_required_modal": { "ssr_resolved": false },
+          "payments.vacuba.display_vacuba_payout_deprecation_error": {
+            "ssr_resolved": false
+          },
+          "payments.payouts.block_add_payout_method_for_vcc_default_instrument": {
+            "ssr_resolved": true
+          },
+          "payments.payouts.sdui_modal_aware_layout": { "ssr_resolved": false },
+          "web.payment.earnings.fast_pay_banner_enabled": {
+            "ssr_resolved": true
+          },
+          "tax.experience.italy_wth_data_collection_enabled": {
+            "ssr_resolved": false
+          },
+          "tax.experience.mobile_back_arrow_enabled": { "ssr_resolved": true },
+          "tax.experience.form_entrypoints_reconfig": { "ssr_resolved": false },
+          "tax.experience.walle_migration": { "ssr_resolved": false },
+          "tax.experience.italy_wth.disable_2022_reminder_modal": {
+            "ssr_resolved": true
+          },
+          "tax.experience.norway.disable.walle": { "ssr_resolved": true },
+          "tax.experience.open_pdf_in_browser": { "ssr_resolved": false },
+          "tax.experience.italy_wth.phase3.global_tin_collection": {
+            "ssr_resolved": true
+          },
+          "tax.experience.w8eci_recertification_flows_enabled": {
+            "ssr_resolved": false
+          },
+          "hosting_services.core_guest_entry_point": { "ssr_resolved": false },
+          "hosting_inbox_hyperloop_migration": { "ssr_resolved": false },
+          "use_new_calendar_router": { "ssr_resolved": true },
+          "hog_add_listing_global_header": { "ssr_resolved": true },
+          "hog_direct_hosting_entrypoints": { "ssr_resolved": true },
+          "enable_account_settings_luxury": { "ssr_resolved": false },
+          "trust.be.coworker_aov.is_enabled": { "ssr_resolved": true },
+          "search.education_announcement_enabled.web": { "ssr_resolved": true },
+          "online_experiences_tab_removal.enable": { "ssr_resolved": true },
+          "search.scroll-restoration": { "ssr_resolved": false },
+          "search-input.autocomplete-ios-aria-live.killswitch": {
+            "ssr_resolved": false
+          },
+          "atomic_calendar_announce_selection": { "ssr_resolved": false },
+          "upfront_pricing_2022_toggle_remove_url_param": {
+            "ssr_resolved": false
+          },
+          "api_web_client_migration.fejax.pricing_guest.kill_switch": {
+            "ssr_resolved": true
+          },
+          "pricing_upfront_pricing_2022_toggle_killswitch": {
+            "ssr_resolved": false
+          },
+          "listing_card_migration_sxs_web_fields_erf1": {
+            "ssr_resolved": true
+          },
+          "listing_card_migration_sxs_web_fields_erf2": {
+            "ssr_resolved": true
+          },
+          "listing_card_migration_sxs_web_fields_erf3": {
+            "ssr_resolved": true
+          },
+          "listing_card_migration_sxs_web_fields_erf4": {
+            "ssr_resolved": true
+          },
+          "search.suggestions_announcement_enabled_force_show.web": {
+            "ssr_resolved": false
+          },
+          "wishlists_portal_save_toast": { "ssr_resolved": false },
+          "search.room_type_prefetch.web.killswitch": { "ssr_resolved": true },
+          "search.room_type_prefetch_original.web.killswitch": {
+            "ssr_resolved": true
+          },
+          "selected_filters_2024_force_web": { "ssr_resolved": false },
+          "stays_pdp_disable_prefetch_force": { "ssr_resolved": false },
+          "disable_marketing_event_tracking.search_listings": {
+            "ssr_resolved": false
+          },
+          "web_map_dismiss_selection_on_filter_change": {
+            "ssr_resolved": true
+          },
+          "web_static_map_shimmer_killswitch": { "ssr_resolved": false },
+          "m13_search_bar_phase1_force_moweb": { "ssr_resolved": false },
+          "m13_search_bar_phase1_force_a_moweb": { "ssr_resolved": false },
+          "m13_search_bar_phase1_force_b_moweb": { "ssr_resolved": false },
+          "explore_image_preload_enable": { "ssr_resolved": true },
+          "guidebook.enable_advice_feedback": { "ssr_resolved": true },
+          "trip_ugc_translate_guidebook": { "ssr_resolved": false },
+          "trip_ugc_translate_guidebook_erf": { "ssr_resolved": false },
+          "web.user_flags.enable_guidebooks_entry": { "ssr_resolved": false },
+          "remove_cbkp_from_homepage_caching": { "ssr_resolved": false },
+          "gx.seo.homepage_metadata_march_2024": { "ssr_resolved": true },
+          "m1_web_cookie_banner_coordination_disabled": {
+            "ssr_resolved": false
+          },
+          "enable_app_install_banner_on_homepage": { "ssr_resolved": true },
+          "web_slim_tabbar_visibility": { "ssr_resolved": true },
+          "disable_web_map_cover": { "ssr_resolved": true },
+          "disable_useHomepageScrollRestoration": { "ssr_resolved": false },
+          "web.mls.enable_modal_nav": { "ssr_resolved": true },
+          "storefronts_mls_adapt_earhart_label": { "ssr_resolved": false },
+          "storefronts_myms_high_quality_video": { "ssr_resolved": false },
+          "storefronts_myms_low_quality_video": { "ssr_resolved": false },
+          "experiences_filter_bar.force_hide": { "ssr_resolved": false },
+          "web.passport_onboarding_animated_icons": { "ssr_resolved": true },
+          "passport_onboarding.profile_preview_edit_link": {
+            "ssr_resolved": false
+          },
+          "user_profile.passport_onboarding_m1_2024": { "ssr_resolved": true },
+          "m13_new_trips_tab": { "ssr_resolved": false },
+          "require_country_for_pwa": { "ssr_resolved": false },
+          "installed-pwa_enabled": { "ssr_resolved": false },
+          "installed-pwa_launched": { "ssr_resolved": false },
+          "client_routing_wrapper_document_handle_link_press": {
+            "ssr_resolved": false
+          },
+          "sw_disable_niobe_cache": { "ssr_resolved": false },
+          "sw_pwa_disable_niobe_cache": { "ssr_resolved": false },
+          "sw_allow_shell_on_search_verticals": { "ssr_resolved": false },
+          "disable_all_service_workers": { "ssr_resolved": false },
+          "temporarily_disable_service_workers_for_me": {
+            "ssr_resolved": false
+          },
+          "disable_app_shell_enabled": { "ssr_resolved": false },
+          "disable_app_shell_launched": { "ssr_resolved": false },
+          "gx_plan_trips_offline": { "ssr_resolved": false },
+          "gx_plan_trips_offline_force": { "ssr_resolved": false },
+          "desktop_service_workers_dynamic_precaching": {
+            "ssr_resolved": true
+          },
+          "pwa_service_workers_dynamic_precaching": { "ssr_resolved": false },
+          "kill_desktop_service_workers_v4": { "ssr_resolved": false },
+          "enable_navbar_visible_at_thresholds": { "ssr_resolved": true },
+          "short_circuit_app_banner_query_force": { "ssr_resolved": false },
+          "short_circuit_app_banner_query_launch": { "ssr_resolved": true },
+          "erf_partytown_gtm_enabled": { "ssr_resolved": false },
+          "disable_thirdparty_js_countries": { "ssr_resolved": false },
+          "deliver_user_consent_gpc": { "ssr_resolved": true },
+          "core_foundation.web.bug_reporter": { "ssr_resolved": false },
+          "core_foundation.web.bug_reporter.submission_kill_switch": {
+            "ssr_resolved": true
+          },
+          "accessibility_guardrail_metrics_web": { "ssr_resolved": true },
+          "payins.soa_currency.hyperloop_shared": { "ssr_resolved": true },
+          "web_jitney_compression": { "ssr_resolved": true },
+          "force_limit_media_web_image_metrics_2024": { "ssr_resolved": false },
+          "force_in_loop_media_web_image_metrics_2024": {
+            "ssr_resolved": false
+          },
+          "force_out_loop_media_web_image_metrics_2024": {
+            "ssr_resolved": false
+          },
+          "cookies_scanner_enabled": { "ssr_resolved": false },
+          "enable_client_storage_metrics": { "ssr_resolved": false },
+          "enable_tracker_changes_logging": { "ssr_resolved": false },
+          "clean_up_targeting_cookie": { "ssr_resolved": true },
+          "kill_partytown_service_workers": { "ssr_resolved": false },
+          "membership.resize_captcha": { "ssr_resolved": true },
+          "china_single_captcha_force_in": { "ssr_resolved": false },
+          "china_geetest_captcha_bind_style": { "ssr_resolved": true },
+          "test_adyen_three_d_secure_full_page_redirect_rule": {
+            "ssr_resolved": false
+          },
+          "quick_pay.log_airlock_request_replay.enable": {
+            "ssr_resolved": true
+          },
+          "china_trust_defense.airlock_miniapps": { "ssr_resolved": true },
+          "trust.kraken.test.stepstones.token.propagation": {
+            "ssr_resolved": false
+          },
+          "should_switch_recaptcha_domain": { "ssr_resolved": true },
+          "google_recaptcha_v3_web_contact_us": { "ssr_resolved": false },
+          "web.enable_otp_input_for_aov": { "ssr_resolved": false },
+          "fin_fraud.migrate_micro_auth_payload": { "ssr_resolved": false },
+          "risk.micro_auth_hard_block": { "ssr_resolved": true },
+          "trust_contact_host_dls19_web": { "ssr_resolved": false },
+          "erf-trust_contact_host_dls19_web_enable": { "ssr_resolved": false },
+          "airlock.payment_authentication.auto_close_modal": {
+            "ssr_resolved": true
+          },
+          "china_trust_defense.captcha_miniapps": { "ssr_resolved": true },
+          "payments.cvv_verification.single_input.enable": {
+            "ssr_resolved": true
+          },
+          "confirm_and_pay_loader_v2_connect_to_bank_screen_disable": {
+            "ssr_resolved": false
+          },
+          "pineapple.pgng.adyen.india.card.payin.ramp": {
+            "ssr_resolved": true
+          },
+          "pineapple.redirect.pgng.adyen.india.card.payin.ramp": {
+            "ssr_resolved": false
+          },
+          "payments.sca.payin.enable_collect_device_data": {
+            "ssr_resolved": false
+          },
+          "payments.sca.payin.force_single_step_challenge": {
+            "ssr_resolved": false
+          },
+          "trust.host_sca.enable_6_digit_input": { "ssr_resolved": false },
+          "payments.sca.custom_get_help_for_host_sca": { "ssr_resolved": true },
+          "payments.sca.force_password_alternative_to_pin": {
+            "ssr_resolved": false
+          },
+          "payments.sca.password_alternative_to_pin": { "ssr_resolved": false },
+          "finfraud.plaid_sandbox_environment": { "ssr_resolved": false },
+          "payments_risk_plaid_friction_legal_content_enable": {
+            "ssr_resolved": true
+          },
+          "payments_risk_plaid_ui_logging_enable": { "ssr_resolved": true },
+          "web.appeals.remediation_window_host": { "ssr_resolved": true },
+          "disable_is_host_post_to_gtm": { "ssr_resolved": false },
+          "disable_remartketing_data": { "ssr_resolved": false },
+          "disable_marketing_event_tracking.page_view": {
+            "ssr_resolved": false
+          },
+          "a4w.sso.m1.a4w5559": { "ssr_resolved": true },
+          "enable_css_has_selector_polyfill": { "ssr_resolved": false },
+          "show_facebook_prompt_force": { "ssr_resolved": false },
+          "legacy_browser_roadblock_rollout": { "ssr_resolved": true }
+        },
+        "erfMisaId": "misa_id_1733494442_EANmYzMDliNmRjN2",
+        "themeId": 1,
+        "loop": "core-guest-loop",
+        "tier": "production",
+        "kube_namespace": "core-guest-loop-production",
+        "niobeClientIsMinimalist": true,
+        "loadSingleClient": true,
+        "niobeApolloClientData": {},
+        "niobeMinimalClientData": [
+          [
+            "StaysPdpSections:{\"id\":\"U3RheUxpc3Rpbmc6MzMwMjA3NTA=\",\"pdpSectionsRequest\":{\"adults\":\"1\",\"amenityFilters\":null,\"bypassTargetings\":false,\"categoryTag\":null,\"causeId\":null,\"checkIn\":null,\"checkOut\":null,\"children\":null,\"disasterId\":null,\"discountedGuestFeeVersion\":null,\"displayExtensions\":null,\"federatedSearchId\":null,\"forceBoostPriorityMessageType\":null,\"hostPreview\":false,\"infants\":null,\"interactionType\":null,\"layouts\":[\"SIDEBAR\",\"SINGLE_COLUMN\"],\"p3ImpressionId\":\"p3_1733494466_P3At_PB3ZWU8Perk\",\"pdpTypeOverride\":null,\"pets\":0,\"photoId\":null,\"preview\":false,\"previousStateCheckIn\":null,\"previousStateCheckOut\":null,\"priceDropSource\":null,\"privateBooking\":false,\"promotionUuid\":null,\"relaxedAmenityIds\":null,\"searchId\":null,\"sectionIds\":null,\"selectedCancellationPolicyId\":null,\"selectedRatePlanId\":null,\"splitStays\":null,\"staysBookingMigrationEnabled\":false,\"translateUgc\":null,\"useNewSectionWrapperApi\":false}}",
+            { "deferred": true }
+          ],
+          [
+            "PdpEarlyFlushMetadataQueryV2:{\"fetchImages\":false,\"id\":\"RGVtYW5kU3RheUxpc3Rpbmc6MzMwMjA3NTA=\"}",
+            {
+              "data": {
+                "node": {
+                  "__typename": "DemandStayListing",
+                  "id": "RGVtYW5kU3RheUxpc3Rpbmc6MzMwMjA3NTA=",
+                  "pdpType": "MARKETPLACE"
+                }
+              },
+              "variables": {
+                "id": "RGVtYW5kU3RheUxpc3Rpbmc6MzMwMjA3NTA=",
+                "fetchImages": false
+              }
+            }
+          ],
+          [
+            "Header:{\"cdnCacheSafe\":true,\"hasLoggedIn\":false,\"isInitialLoad\":true,\"source\":\"EXPLORE\"}",
+            {
+              "data": {
+                "presentation": {
+                  "__typename": "RootPresentationContainer",
+                  "header": {
+                    "__typename": "Header",
+                    "topLevelItemGroup": {
+                      "__typename": "HeaderItemGroup",
+                      "items": [
+                        {
+                          "__typename": "HeaderItem",
+                          "itemId": "BECOME_A_HOME_HOST",
+                          "loggingId": "simpleHeader.loggedOut.becomeAHost",
+                          "url": "/host/homes",
+                          "type": "LINK",
+                          "text": "Anuncie seu espaço no Airbnb"
+                        },
+                        {
+                          "__typename": "HeaderItem",
+                          "itemId": "LANGUAGE_AND_CURRENCY",
+                          "loggingId": "simpleHeader.loggedOut.localeSettingsMenu",
+                          "url": null,
+                          "type": "LOCALE",
+                          "text": null
+                        }
+                      ]
+                    },
+                    "menuItemGroups": [
+                      {
+                        "__typename": "HeaderItemGroup",
+                        "groupId": "SECONDARY_MENU",
+                        "items": [
+                          {
+                            "__typename": "HeaderItem",
+                            "hasBadge": false,
+                            "itemId": "SIGN_UP",
+                            "caption": null,
+                            "isNew": null,
+                            "loggingId": "simpleHeader.loggedOut.profileMenu.signUp",
+                            "primary": true,
+                            "text": "Cadastrar-se",
+                            "type": "LINK",
+                            "url": "/signup_login"
+                          },
+                          {
+                            "__typename": "HeaderItem",
+                            "hasBadge": false,
+                            "itemId": "LOG_IN",
+                            "caption": null,
+                            "isNew": null,
+                            "loggingId": "simpleHeader.loggedOut.profileMenu.logIn",
+                            "primary": false,
+                            "text": "Entrar",
+                            "type": "LINK",
+                            "url": "/login"
+                          }
+                        ]
+                      },
+                      {
+                        "__typename": "HeaderItemGroup",
+                        "groupId": "TERTIARY_MENU",
+                        "items": [
+                          {
+                            "__typename": "HeaderItem",
+                            "hasBadge": false,
+                            "itemId": "GIFTCARDS",
+                            "caption": null,
+                            "isNew": null,
+                            "loggingId": "simpleHeader.loggedOut.profileMenu.giftcards",
+                            "primary": false,
+                            "text": "Cartões de presente",
+                            "type": "LINK",
+                            "url": "/giftcards"
+                          },
+                          {
+                            "__typename": "HeaderItem",
+                            "hasBadge": false,
+                            "itemId": "HOST_A_HOME",
+                            "caption": null,
+                            "isNew": null,
+                            "loggingId": "simpleHeader.loggedOut.profileMenu.hostStays",
+                            "primary": false,
+                            "text": "Anuncie seu espaço no Airbnb",
+                            "type": "LINK",
+                            "url": "/host/homes"
+                          },
+                          {
+                            "__typename": "HeaderItem",
+                            "hasBadge": false,
+                            "itemId": "HOST_AN_EXPERIENCE",
+                            "caption": null,
+                            "isNew": null,
+                            "loggingId": "simpleHeader.loggedOut.profileMenu.hostExperiences",
+                            "primary": false,
+                            "text": "Ofereça uma experiência",
+                            "type": "LINK",
+                            "url": "/host/experiences?from_nav=1"
+                          },
+                          {
+                            "__typename": "HeaderItem",
+                            "hasBadge": false,
+                            "itemId": "HELP",
+                            "caption": null,
+                            "isNew": null,
+                            "loggingId": "simpleHeader.loggedOut.profileMenu.help",
+                            "primary": false,
+                            "text": "Central de Ajuda",
+                            "type": "HELP",
+                            "url": "/help"
+                          }
+                        ]
+                      }
+                    ],
+                    "avatarImageUrl": null
+                  }
+                }
+              },
+              "variables": {
+                "cdnCacheSafe": true,
+                "hasLoggedIn": false,
+                "isInitialLoad": true,
+                "source": "EXPLORE"
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    ["NiobeMinimalistCacheToken", [], 1]
+  ],
+  "root > core-guest-spa > app": [],
+  "root > core-guest-spa > app > /rooms/:id(\\d+)/:subpageId?/:nestedSubpageId?": []
+}
